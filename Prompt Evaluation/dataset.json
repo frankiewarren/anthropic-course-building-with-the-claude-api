@@ -1,11 +1,14 @@
 [
   {
-    "task": "Create a regex pattern to validate AWS IAM username format (lowercase, alphanumeric, max 64 characters, cannot start with number)"
+    "task": "Create a regular expression to validate an AWS IAM username which must start with a letter, contain only letters, numbers, and specific symbols (+=-,.@_), and be between 1-64 characters long",
+    "format": "regex"
   },
   {
-    "task": "Write a Python function to convert an AWS Lambda function configuration from one region to another"
+    "task": "Write a Python function to convert an AWS EC2 instance type (e.g., 't2.micro') into its core components of family and size",
+    "format": "python"
   },
   {
-    "task": "Develop a JSON schema to define the structure for an AWS S3 bucket policy that allows read access from a specific AWS account"
+    "task": "Create a JSON schema to define the structure for an AWS CloudFormation resource configuration, including required and optional fields",
+    "format": "json"
   }
 ]
