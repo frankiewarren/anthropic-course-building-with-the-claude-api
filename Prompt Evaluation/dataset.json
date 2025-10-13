@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Create a regex pattern to validate AWS IAM username format (lowercase, alphanumeric, max 64 characters, cannot start with number)"
+  },
+  {
+    "task": "Write a Python function to convert an AWS Lambda function configuration from one region to another"
+  },
+  {
+    "task": "Develop a JSON schema to define the structure for an AWS S3 bucket policy that allows read access from a specific AWS account"
+  }
+]
