@@ -1,14 +1,17 @@
 [
   {
-    "task": "Create a regular expression to validate an AWS IAM username which must start with a letter, contain only letters, numbers, and specific symbols (+=-,.@_), and be between 1-64 characters long",
-    "format": "regex"
+    "task": "Create a regular expression to validate an AWS IAM username, which must start with a letter, can contain letters, numbers, and these special characters (+=-,.@_), and be between 1-64 characters long",
+    "format": "regex",
+    "solution_criteria": "Regex must fully match the entire username, handle length constraints, and only allow specified characters"
   },
   {
-    "task": "Write a Python function to convert an AWS EC2 instance type (e.g., 't2.micro') into its core components of family and size",
-    "format": "python"
+    "task": "Write a Python function that converts an AWS CloudFormation resource type (e.g., 'AWS::EC2::Instance') into a compact, lowercase resource identifier",
+    "format": "python",
+    "solution_criteria": "Function should remove '::' separators, convert to lowercase, handle varied input lengths"
   },
   {
-    "task": "Create a JSON schema to define the structure for an AWS CloudFormation resource configuration, including required and optional fields",
-    "format": "json"
+    "task": "Create a JSON object representing a basic AWS Lambda function configuration with minimal required properties",
+    "format": "json",
+    "solution_criteria": "JSON must include function name, runtime, handler, and role ARN with valid structure"
   }
 ]
