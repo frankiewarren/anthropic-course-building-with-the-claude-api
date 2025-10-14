@@ -1,0 +1,2658 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">49</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">3.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">0.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Test with a triathlete's calorie-dense meal plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 75<br><strong>goal:</strong> Optimize performance for Olympic-distance triathlon training<br><strong>restrictions:</strong> Lactose-intolerant, no red meat</td>
+                <td class="criteria">• Provide total daily calorie intake matching athlete's energy requirements<br>• Include balanced macronutrient distribution for endurance training<br>• Incorporate easily digestible protein sources<br>• Ensure meal plan supports training recovery</td>
+                <td class="output"><pre>Based on the information provided, here's a recommended nutrition plan for an Olympic-distance triathlon athlete:
+
+Macronutrient Breakdown:
+- Carbohydrates: 55-65% of total calories (crucial for endurance training)
+- Protein: 15-20% of total calories
+- Healthy fats: 20-25% of total calories
+
+Specific Recommendations:
+1. Protein Sources:
+- Chicken
+- Turkey
+- Fish (salmon, tuna, mackerel)
+- Eggs
+- Plant-based proteins (tofu, tempeh, legumes)
+- Lactose-free protein powders
+
+2. Carbohydrate Sources:
+- Whole grains (quinoa, brown rice, oats)
+- Sweet potatoes
+- Fruits
+- Vegetables
+- Whole grain pasta
+
+3. Healthy Fat Sources:
+- Avocado
+- Nuts and seeds
+- Olive oil
+- Coconut oil
+- Nut butters
+
+Meal Timing:
+- Pre-workout: Complex carbs, lean protein
+- Post-workout: Quick-absorbing protein and carbs
+- Hydration: Minimum 3-4 liters of water daily
+
+Supplements to Consider:
+- Electrolyte supplements
+- Omega-3
+- Vitamin D
+- Multivitamin
+
+Would you like me to develop a sample meal plan?</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides solid nutritional guidelines for a triathlon athlete, it fails to meet the mandatory requirements of specifying daily caloric intake, exact meals, portions, and timing. The output is more of a general nutritional framework than a concrete meal plan. The lack of precise calorie calculation and meal specifics means the solution does not fully address the original task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a powerlifter's high-protein muscle-building diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 95<br><strong>goal:</strong> muscle hypertrophy and strength gain for powerlifting<br><strong>restrictions:</strong> no dairy, no gluten</td>
+                <td class="criteria">• Meal plan must provide minimum 200g protein daily<br>• Calories should align with athlete's muscle-building requirements<br>• All meals accommodate gluten-free and dairy-free restrictions<br>• Nutritional plan supports powerlifting performance goals</td>
+                <td class="output"><pre>Based on the provided information, here's a nutritional recommendation for this individual:
+
+Calorie and Macronutrient Targets:
+- Estimated Daily Calories: 3,300-3,600 calories
+- Protein: 180-210g (1.9-2.2g per kg of body weight)
+- Carbohydrates: 400-450g
+- Fats: 80-100g
+
+Food Recommendations:
+Protein Sources (dairy-free, gluten-free):
+- Chicken breast
+- Turkey
+- Lean beef
+- Salmon
+- Tuna
+- Eggs
+- Plant proteins: tofu, tempeh, quinoa
+- Protein powders: pea, rice, or hemp protein
+
+Carbohydrate Sources:
+- Sweet potatoes
+- Rice (white/brown)
+- Quinoa
+- Oats (gluten-free certified)
+- Fruits
+- Gluten-free pasta
+
+Healthy Fat Sources:
+- Avocados
+- Nuts (almonds, walnuts)
+- Seeds (chia, pumpkin)
+- Olive oil
+- Coconut oil
+
+Meal Timing:
+- 4-5 meals per day
+- Pre and post-workout nutrition crucial
+- Eat every 3-4 hours
+
+Supplements:
+- Creatine monohydrate
+- Gluten-free protein powder
+- Multivitamin
+
+Hydration: 3-4 liters of water daily</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and meets protein/calorie targets, it fails the MANDATORY requirement of presenting a specific 1-day meal plan with exact foods, portions, and timing. The output is more of a nutritional strategy than a concrete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a vegan endurance cyclist's nutritional requirements</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 72<br><strong>goal:</strong> optimize endurance cycling performance<br><strong>restrictions:</strong> vegan diet only, no processed sugars</td>
+                <td class="criteria">• Provides 3000-3500 daily calories<br>• Includes balanced plant-based protein sources<br>• Supports high-energy endurance cycling requirements<br>• Maintains proper macronutrient distribution for athletic performance</td>
+                <td class="output"><pre>For an endurance cyclist on a vegan diet aiming to optimize performance, here's a recommended nutritional approach:
+
+Macronutrient Breakdown:
+- Carbohydrates: 55-65% of total calories (focus on complex carbs)
+- Protein: 15-20% of total calories
+- Healthy Fats: 20-25% of total calories
+
+Recommended Foods:
+1. Carbohydrates:
+- Whole grains (quinoa, brown rice, oats)
+- Sweet potatoes
+- Legumes
+- Fruits (bananas, berries)
+
+2. Protein Sources:
+- Tofu
+- Tempeh
+- Seitan
+- Lentils
+- Chickpeas
+- Pea protein
+- Hemp seeds
+- Chia seeds
+
+3. Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Seeds (flax, chia)
+- Olive oil
+- Coconut
+
+Specific Considerations:
+- High-quality plant-based protein powder
+- B12 supplementation
+- Iron-rich foods
+- Omega-3 supplements (algae-based)
+
+Meal Timing:
+- Pre-ride: Complex carbs, moderate protein
+- During ride: Energy gels (natural, no processed sugar)
+- Post-ride: Protein and carb recovery meal
+
+Hydration is crucial - focus on electrolyte balance.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance for a vegan endurance cyclist, it fails to meet the mandatory requirements of specifying daily caloric total, exact meal portions, and a complete meal timeline. The nutritional advice is sound, but the solution does not provide the structured meal plan requested in the original task.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional soccer player's balanced nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 80<br><strong>goal:</strong> Performance optimization and muscle recovery for professional soccer match preparation<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provides balanced macronutrient distribution for athlete's energy needs<br>• Accommodates specified dietary restrictions<br>• Includes pre and post-training nutritional recommendations<br>• Supports muscle recovery and performance optimization</td>
+                <td class="output"><pre>Based on the provided information, here's a dietary recommendation:
+
+Nutritional Profile:
+- High protein intake for muscle recovery
+- Complex carbohydrates for energy
+- Balanced fats
+- Lactose-free options
+- No red meat
+
+Recommended Diet Plan:
+
+Proteins (Alternatives to Red Meat):
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna)
+- Plant-based proteins (tofu, tempeh)
+- Egg whites
+- Quinoa
+- Legumes (beans, lentils)
+
+Carbohydrates:
+- Sweet potatoes
+- Brown rice
+- Whole grain pasta
+- Oats
+- Quinoa
+- Fruits (bananas, berries)
+
+Healthy Fats:
+- Avocado
+- Olive oil
+- Nuts (almonds, walnuts)
+- Seeds (chia, flax)
+- Coconut oil
+
+Lactose-Free Alternatives:
+- Almond milk
+- Soy milk
+- Coconut yogurt
+- Lactose-free protein supplements
+
+Hydration & Recovery:
+- Plenty of water
+- Electrolyte drinks
+- Smoothies with plant-based protein
+- Tart cherry juice for inflammation
+
+Meal Timing:
+- Balanced meals every 3-4 hours
+- Pre and post-workout nutrition
+- Focus on nutrient density</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework, it fails to meet the mandatory requirements of specifying daily caloric intake, precise macronutrient breakdown, and exact meal details with portions. The strategic approach is sound, but lacks the quantitative specificity needed for an athlete's precise nutritional plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a CrossFit athlete's performance nutrition strategy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 85<br><strong>goal:</strong> Optimize CrossFit performance and muscle recovery<br><strong>restrictions:</strong> Gluten-free, no dairy</td>
+                <td class="criteria">• Meal plan must provide 3000-3500 calories<br>• Include balanced macronutrient distribution (40% protein, 30% carbs, 30% fat)<br>• Support high-intensity training and muscle recovery<br>• Adhere to specified dietary restrictions</td>
+                <td class="output"><pre>Based on the provided information, here's a nutrition recommendation for this CrossFit athlete:
+
+Macronutrient Breakdown:
+- Protein: 25-30% of calories (180-215g per day)
+- Carbohydrates: 40-45% of calories (300-350g per day)
+- Healthy Fats: 25-30% of calories (80-100g per day)
+
+Recommended Diet Strategy:
+1. Protein Sources (Gluten-free, Dairy-free):
+- Lean meats (chicken, turkey, lean beef)
+- Fish (salmon, tuna)
+- Eggs
+- Plant-based proteins (tofu, tempeh)
+- Protein powders (pea, rice, or hemp protein)
+
+2. Carbohydrates:
+- Sweet potatoes
+- Quinoa
+- Rice
+- Fruits
+- Vegetables
+- Gluten-free oats
+
+3. Healthy Fats:
+- Avocado
+- Nuts and seeds
+- Olive oil
+- Coconut oil
+- Nut butters
+
+Meal Timing:
+- Pre-workout: Complex carbs, lean protein
+- Post-workout: Protein and fast-absorbing carbs for recovery
+- 4-5 balanced meals per day
+
+Hydration: 3-4 liters of water daily
+
+Supplements:
+- Whey protein alternative
+- Creatine
+- BCAAs
+- Multivitamin</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework for a CrossFit athlete, it fails to meet the mandatory requirements of specifying daily caloric intake and providing exact meal portions. The macronutrient guidance is strong, but the lack of precise meal details prevents full compliance with the task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a rock climber's lightweight, nutrient-dense meals</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 70<br><strong>goal:</strong> maintain climbing performance and muscle recovery<br><strong>restrictions:</strong> vegetarian, low-processed foods</td>
+                <td class="criteria">• Provide 3-4 nutrient-dense meals appropriate for rock climbing<br>• Ensure total daily caloric intake matches athlete's metabolic needs<br>• Include balanced macronutrient distribution for muscle recovery</td>
+                <td class="output"><pre>For a vegetarian climber focused on performance and recovery, here's a nutrition recommendation:
+
+Macronutrient Breakdown:
+- Protein: 20-25% of calories (critical for muscle recovery)
+- Carbohydrates: 50-55% of calories (for energy)
+- Healthy Fats: 20-25% of calories (for hormonal balance)
+
+Recommended Daily Intake:
+- Calories: ~2,400-2,600 (based on height, weight, active lifestyle)
+- Protein: 120-140g (plant-based sources)
+  - Tofu
+  - Tempeh
+  - Legumes
+  - Quinoa
+  - Lentils
+  - Greek yogurt
+  - Protein supplements (pea/rice protein)
+
+Key Nutritional Strategies:
+1. High-quality complete proteins
+2. Complex carbohydrates
+3. Anti-inflammatory foods
+4. Nutrient-dense whole foods
+
+Recovery-Focused Foods:
+- Chia seeds
+- Berries
+- Nuts and seeds
+- Sweet potatoes
+- Leafy greens
+- Whole grains
+
+Supplements to Consider:
+- Vitamin B12
+- Iron
+- Omega-3 (algae-based)
+- Creatine
+- Protein powder
+
+Hydration: 2.5-3 liters of water daily</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and strategic insights, it fails to meet the MANDATORY requirements of specifying exact meals, portions, and timing. The output is more of a nutritional framework than a concrete 1-day meal plan. The lack of specific meal details and precise caloric allocation per meal means this solution cannot fully satisfy the original task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a marathon runner's carbohydrate loading plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 75<br><strong>goal:</strong> Marathon carbohydrate loading before race day<br><strong>restrictions:</strong> No dairy, vegetarian diet</td>
+                <td class="criteria">• Provides 7-10g carbohydrates per kg of body weight<br>• Meal plan covers full 24-hour period<br>• Meets vegetarian and dairy-free requirements<br>• Balances complex and simple carbohydrate sources</td>
+                <td class="output"><pre>For a vegetarian marathon runner preparing for carbohydrate loading, here's a recommended nutrition plan:
+
+Carbohydrate Loading Recommendations:
+- Increase carbohydrate intake to 7-10 grams per kg of body weight
+- Total daily carbohydrate intake: 525-750 grams
+
+Recommended Food Options:
+Carbohydrate-Rich Foods:
+- Whole grain pasta
+- Brown rice
+- Quinoa
+- Sweet potatoes
+- Oats
+- Whole grain bread
+- Fruits (bananas, dates, dried fruits)
+
+Protein Sources (Vegetarian):
+- Tofu
+- Tempeh
+- Legumes (beans, lentils)
+- Chickpeas
+- Plant-based protein powders
+- Nuts and seeds
+
+Dairy-Free Alternatives:
+- Almond milk
+- Soy milk
+- Coconut yogurt
+- Nutritional yeast
+
+Hydration:
+- Water
+- Electrolyte drinks
+- Coconut water
+
+Sample Meal Plan:
+- Breakfast: Oatmeal with banana, chia seeds
+- Lunch: Quinoa bowl with roasted vegetables
+- Dinner: Pasta with tofu and vegetable sauce
+- Snacks: Energy bars, fruits, dried fruits
+
+Recommended to consult a sports nutritionist for personalized advice.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">The solution partially addresses the task requirements but fails to meet the mandatory criteria of providing daily caloric total, precise macronutrient breakdown, and specific meal portions/timing. While the meal plan offers good nutritional guidance for a vegetarian marathon runner, it lacks the critical quantitative details needed for a comprehensive nutrition plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a gymnast's high-energy, low-volume meal strategy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 168<br><strong>weight:</strong> 62<br><strong>goal:</strong> Maintain high-performance muscle definition and energy for gymnastics training<br><strong>restrictions:</strong> Gluten-free, no red meat</td>
+                <td class="criteria">• Provide balanced macronutrient distribution suitable for gymnast's energy needs<br>• Ensure meal plan fits within 2000-2500 calorie range<br>• Include protein sources compatible with dietary restrictions<br>• Design meals that support quick recovery and sustained energy</td>
+                <td class="output"><pre>Based on the information provided, here's a nutrition recommendation for this gymnast:
+
+Dietary Focus:
+- High-protein diet to support muscle maintenance and recovery
+- Complex carbohydrates for sustained energy
+- Lean proteins that are gluten-free
+- Nutrient-dense foods
+
+Recommended Food Choices:
+1. Proteins:
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna, tilapia)
+- Eggs
+- Greek yogurt
+- Tofu
+- Protein shakes (gluten-free)
+
+2. Carbohydrates:
+- Quinoa
+- Sweet potatoes
+- Brown rice
+- Gluten-free oats
+- Fruits
+- Vegetables
+
+3. Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Coconut
+
+4. Supplements:
+- Whey or plant-based protein
+- Multivitamin
+- Omega-3
+
+Estimated Macronutrient Breakdown:
+- Protein: 30-35%
+- Carbohydrates: 45-50%
+- Fats: 20-25%
+
+Daily Calorie Intake: Around 2,200-2,400 calories
+
+Recommendation: Consult a sports nutritionist for personalized advice.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides solid nutritional guidance, it fails to meet the mandatory requirements of specifying exact meals, portions, and timing. The output is more of a general nutritional framework than a concrete 1-day meal plan. The lack of precise meal details and portion sizes means this solution does not fully satisfy the task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a bodybuilder's pre-competition cutting diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 85<br><strong>goal:</strong> pre-competition cutting diet for bodybuilding with minimal muscle loss<br><strong>restrictions:</strong> dairy-free, no added sugars</td>
+                <td class="criteria">• Meal plan must be exactly 1 day long<br>• Total calories should support fat loss while preserving muscle mass<br>• Protein intake must be high (at least 2.2g per kg of body weight)<br>• Meal plan must accommodate specified dietary restrictions</td>
+                <td class="output"><pre>For a pre-competition cutting diet tailored to a bodybuilder with these specifications, here's a recommended nutritional approach:
+
+Macronutrient Breakdown:
+- Protein: 2.3-2.5g per kg of body weight (around 195-212g protein daily)
+- Carbohydrates: Moderate, cyclic low-carb approach
+- Fats: Moderate, focusing on quality sources
+
+Recommended Daily Diet:
+
+Protein Sources (dairy-free):
+- Lean chicken breast
+- Turkey
+- Fish (salmon, tuna, tilapia)
+- Egg whites
+- Plant-based proteins (pea protein, hemp protein)
+- Lean beef (in moderation)
+
+Carbohydrate Sources:
+- Sweet potatoes
+- Brown rice
+- Quinoa
+- Oats
+- Green vegetables
+- Limited fruits (berries)
+
+Healthy Fat Sources:
+- Avocado
+- Nuts (almonds, walnuts)
+- Olive oil
+- Coconut oil
+- Chia seeds
+
+Meal Timing:
+- 5-6 smaller meals per day
+- Protein in every meal
+- Carb cycling (lower carb days, strategic higher carb days)
+
+Supplements:
+- Whey protein isolate (dairy-free)
+- BCAAs
+- Multivitamin
+- Fish oil
+
+Hydration: 3-4 liters of water daily
+
+Would you like me to provide a sample meal plan?</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework, it fails to meet the mandatory requirements of presenting a specific 1-day meal plan with exact calories, portions, and meal timing. The output is more of a general dietary strategy than a concrete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a mountain biker's outdoor training nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 75<br><strong>goal:</strong> Optimize performance for mountain biking endurance training<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provides balanced macronutrient intake for high-intensity training<br>• Accommodates specified dietary restrictions<br>• Includes appropriate pre and post-workout nutrition<br>• Supports sustained energy for mountain biking activities</td>
+                <td class="output"><pre>For a mountain biking endurance athlete with these specifications, here's a recommended nutritional approach:
+
+Nutritional Profile:
+- High complex carbohydrates (55-65% of diet)
+- Lean proteins (20-25% of diet)
+- Healthy fats (15-20% of diet)
+
+Recommended Diet Strategy:
+
+Carbohydrates:
+- Whole grains (quinoa, brown rice, oats)
+- Sweet potatoes
+- Fruits (bananas, berries)
+- Legumes
+
+Proteins (Dairy-free, No Red Meat):
+- Chicken
+- Fish (salmon, tuna)
+- Turkey
+- Eggs
+- Plant proteins: 
+  - Tofu
+  - Tempeh
+  - Lentils
+  - Chickpeas
+  - Pea protein powder
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Seeds (chia, flax)
+- Olive oil
+
+Hydration & Supplements:
+- Electrolyte drinks
+- Calcium-fortified plant milks
+- Potential B12 and iron supplements
+
+Meal Timing:
+- Eat every 3-4 hours
+- Larger meals before/after training
+- Quick-absorbing carbs/proteins post-workout
+
+Recommended daily calorie intake: ~2,800-3,200 calories</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework for a mountain biking athlete, it fails to meet the mandatory requirements of specifying exact meals, portions, and meal timing. The strategic overview is strong, but lacks the granular detail required for a complete 1-day meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a weightlifter's strength-focused meal plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 183<br><strong>weight:</strong> 95<br><strong>goal:</strong> muscle hypertrophy and strength gains for powerlifting<br><strong>restrictions:</strong> dairy-free, no shellfish</td>
+                <td class="criteria">• Provides a complete 1-day meal plan<br>• Meets estimated caloric needs for weightlifter<br>• Includes adequate protein for muscle recovery<br>• Respects specified dietary restrictions</td>
+                <td class="output"><pre>For someone with these characteristics and goals, here's a nutrition recommendation:
+
+Calorie & Macronutrient Breakdown:
+- Daily Calories: Approximately 3,300-3,600 calories
+- Protein: 180-220g (1.9-2.3g per kg of body weight)
+- Carbs: 400-450g 
+- Fats: 80-100g
+
+Recommended Food Choices:
+Proteins (dairy-free):
+- Chicken breast
+- Lean beef
+- Turkey
+- Salmon
+- Eggs
+- Plant proteins (tofu, tempeh)
+- Pea protein powder
+- Lean ground meats
+
+Carbohydrates:
+- Brown rice
+- Sweet potatoes
+- Quinoa
+- Oats
+- Whole wheat pasta
+- Fruits
+- Vegetables
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Coconut oil
+- Chia seeds
+- Salmon
+
+Meal Timing:
+- 4-5 meals per day
+- Protein with each meal
+- Carbs around workouts
+- Post-workout protein shake
+
+Supplements:
+- Creatine
+- Vegan protein powder
+- Multivitamin
+- Omega-3s</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and respects dietary restrictions, it fails to meet the mandatory requirement of creating a specific 1-day meal plan with exact foods, portions, and timing. The output is more of a nutritional strategy than a concrete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with an Olympic swimmer's high-performance nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 190<br><strong>weight:</strong> 85<br><strong>goal:</strong> Olympic swimming performance optimization<br><strong>restrictions:</strong> High protein, gluten-free diet</td>
+                <td class="criteria">• Provide minimum 2500 calories tailored for high-intensity swimming training<br>• Include balanced macronutrient distribution with emphasis on protein and complex carbohydrates<br>• Demonstrate hydration and meal timing considerations for athletic performance<br>• Accommodate specified dietary restrictions</td>
+                <td class="output"><pre>For an Olympic swimming athlete with these specifications, I'll recommend a high-protein, gluten-free nutrition strategy:
+
+Macronutrient Breakdown:
+- Protein: 2.2-2.5g per kg of body weight (187-212g daily)
+- Carbohydrates: 5-7g per kg (425-595g daily)
+- Healthy fats: 20-30% of total calories
+
+Recommended Food Choices:
+Proteins:
+- Lean chicken breast
+- Wild-caught fish (salmon, tuna)
+- Turkey
+- Eggs
+- Whey protein isolate (gluten-free)
+- Greek yogurt
+- Quinoa
+- Lean beef
+
+Gluten-Free Carbohydrates:
+- Sweet potatoes
+- Brown rice
+- Quinoa
+- Fruits
+- Gluten-free oats
+- Beans
+- Vegetables
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Salmon
+
+Hydration: 4-5 liters of water daily
+
+Meal Timing:
+- 5-6 smaller meals
+- Pre and post-workout nutrition
+- Focus on nutrient-dense, whole foods
+
+Recommended daily caloric intake: 3500-4000 calories</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and food recommendations, it fails to meet the mandatory requirements of specifying exact meals, portions, and precise timing. The output is more of a nutritional strategy than a concrete 1-day meal plan. The caloric range and macronutrient considerations are strong, but the lack of specificity prevents full compliance with the task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a vegetarian ultra-marathon runner's diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 68<br><strong>goal:</strong> optimize endurance performance and recovery for ultra-marathon training<br><strong>restrictions:</strong> vegetarian diet, no eggs</td>
+                <td class="criteria">• Provide minimum 2000 calories with balanced macronutrient distribution<br>• Include adequate plant-based protein sources for muscle recovery<br>• Ensure complex carbohydrates for sustained energy during long-distance training<br>• Incorporate nutrient-dense foods supporting endurance performance</td>
+                <td class="output"><pre>For an endurance athlete following a vegetarian diet without eggs, here's a nutrition recommendation:
+
+Macronutrient Breakdown:
+- Carbohydrates: 55-65% of total calories (critical for endurance performance)
+- Protein: 1.2-1.6 g per kg of body weight (for muscle recovery)
+- Healthy fats: 20-25% of total calories
+
+Key Dietary Recommendations:
+1. Protein Sources:
+- Legumes (beans, lentils, chickpeas)
+- Tofu and tempeh
+- Seitan
+- Quinoa
+- Plant-based protein powders
+- Greek yogurt and cottage cheese (if lacto-vegetarian)
+- Nuts and seeds
+
+2. Complex Carbohydrates:
+- Whole grains (brown rice, quinoa, oats)
+- Sweet potatoes
+- Fruits
+- Vegetables
+
+3. Healthy Fats:
+- Avocados
+- Nuts and seeds
+- Olive oil
+- Chia and flax seeds
+
+Specific Considerations:
+- High iron-rich foods (spinach, lentils)
+- Vitamin B12 supplements
+- Omega-3 supplements
+- Adequate hydration
+- Electrolyte replacement during long training
+
+Would you like a more detailed meal plan?</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and strategic recommendations for a vegetarian endurance athlete, it fundamentally fails the mandatory requirements by not specifying daily calories, exact meals, portions, and timing. The output reads more like nutritional advice than a concrete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a mixed martial arts fighter's weight class diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 77<br><strong>goal:</strong> maintain fighting weight and optimize performance for lightweight MMA competition<br><strong>restrictions:</strong> high protein, low carb, no dairy</td>
+                <td class="criteria">• Provide total daily caloric intake matching athlete's metabolic needs<br>• Include balanced macronutrient distribution for muscle maintenance<br>• Ensure meal plan fits within specified dietary restrictions<br>• Create 3-4 meals/snacks that support high-intensity training recovery</td>
+                <td class="output"><pre>For a lightweight MMA athlete with these specifications, here's a recommended nutritional approach:
+
+Macronutrient Breakdown:
+- Protein: 2.0-2.2g per kg of body weight (approximately 150-170g protein daily)
+- Carbohydrates: Moderate, focus on complex carbs (100-150g daily)
+- Healthy fats: 20-30% of total calories
+
+Recommended Food Choices:
+Proteins:
+- Lean meats: Chicken breast, turkey, lean beef
+- Fish: Salmon, tuna, tilapia
+- Eggs
+- Plant-based proteins: Tofu, tempeh, legumes
+- Protein powders (non-dairy like pea or hemp)
+
+Carbohydrates:
+- Sweet potatoes
+- Quinoa
+- Brown rice
+- Vegetables
+- Fruits in moderation
+
+Healthy Fats:
+- Avocado
+- Nuts (almonds, walnuts)
+- Olive oil
+- Coconut oil
+- Chia seeds
+
+Hydration:
+- Water (3-4 liters daily)
+- Electrolyte drinks during intense training
+
+Meal Frequency:
+- 5-6 smaller meals daily
+- Timing meals around training sessions
+
+Supplements:
+- Omega-3
+- Multivitamin
+- Branched-chain amino acids (BCAAs)</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and food recommendations, it fails to meet the mandatory requirements of specifying daily caloric intake, exact meal portions, and a complete meal plan with precise timing. The output reads more like general nutritional advice than a specific 1-day meal plan for the athlete.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a tennis player's match-day nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 82<br><strong>goal:</strong> High-performance nutrition for professional tennis match day<br><strong>restrictions:</strong> Gluten-free diet, no red meat</td>
+                <td class="criteria">• Provide balanced nutrition covering pre-match, match, and recovery periods<br>• Include adequate protein and complex carbohydrates for sustained energy<br>• Accommodate gluten-free and no red meat dietary restrictions<br>• Design meal plan under 2500 calories with optimal macronutrient distribution</td>
+                <td class="output"><pre>For a professional tennis player with these specifications, here's a recommended nutritional plan focusing on high-performance, gluten-free options:
+
+Breakfast (Pre-Match):
+- Gluten-free oatmeal with banana and almond butter
+- Greek yogurt
+- Scrambled egg whites
+- Fresh berries
+- Hydration: Water and electrolyte drink
+
+Mid-Morning Snack:
+- Gluten-free energy bar
+- Coconut water
+- Handful of mixed nuts
+
+Lunch (4-5 hours before match):
+- Grilled chicken breast
+- Quinoa
+- Roasted sweet potato
+- Steamed green vegetables
+- Olive oil dressing
+
+Pre-Match Snack (1-2 hours before):
+- Rice cakes with almond butter
+- Banana
+- Hydration drink
+
+During Match:
+- Electrolyte drinks
+- Energy gels
+- Banana or dried fruit
+
+Post-Match Recovery:
+- Protein smoothie with:
+  * Whey protein isolate
+  * Spinach
+  * Banana
+  * Almond milk
+- Gluten-free recovery meal with lean protein (fish/chicken) and complex carbohydrates
+
+Key nutritional focuses:
+- High protein
+- Complex carbohydrates
+- Gluten-free
+- Hydration
+- Easily digestible foods</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a thoughtful meal plan for a professional tennis athlete, it fails to meet the mandatory requirements of specifying daily caloric total, exact macronutrient breakdown, and precise meal portions/timing. These omissions prevent the solution from fully addressing the task specifications.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional dancer's lean muscle maintenance diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 170<br><strong>weight:</strong> 62<br><strong>goal:</strong> lean muscle maintenance and performance optimization<br><strong>restrictions:</strong> dairy-free, no processed sugars</td>
+                <td class="criteria">• Provide calorie intake matching dancer's metabolic needs<br>• Include balanced protein sources for muscle preservation<br>• Ensure meals support high-energy performance requirements<br>• Respect specified dietary restrictions</td>
+                <td class="output"><pre>Based on the provided information, here's a recommended nutrition plan:
+
+Macronutrient Breakdown:
+- Protein: 1.6-2g per kg of body weight (about 100-124g daily)
+- Carbohydrates: 40-45% of total calories
+- Healthy fats: 25-30% of total calories
+
+Recommended Daily Intake:
+- Calories: Approximately 2,000-2,200 (depends on activity level)
+
+Food Recommendations:
+Proteins:
+- Lean meats (chicken, turkey)
+- Fish (salmon, tuna)
+- Eggs
+- Plant-based proteins (tofu, tempeh, legumes)
+
+Carbohydrates:
+- Quinoa
+- Sweet potatoes
+- Brown rice
+- Oats
+- Fruits
+- Vegetables
+
+Healthy Fats:
+- Avocado
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Coconut
+
+Dairy-Free Alternatives:
+- Almond milk
+- Coconut yogurt
+- Nutritional yeast
+
+Supplements (Optional):
+- Vegan protein powder
+- Creatine
+- Omega-3
+
+Hydration: 2-3 liters of water daily</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides solid nutritional guidelines, it fails to meet the mandatory requirements of specifying exact meals, portions, and timing. The macronutrient guidance is good, but without a structured daily meal plan, it does not fully address the original task.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a high-altitude mountaineer's calorie requirements</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 82<br><strong>goal:</strong> High-altitude mountaineering performance nutrition<br><strong>restrictions:</strong> High-calorie, lightweight foods suitable for extreme altitude conditions</td>
+                <td class="criteria">• Provides minimum 4000 calories suitable for high-altitude energy expenditure<br>• Includes balanced macronutrient distribution (40% carbs, 30% protein, 30% healthy fats)<br>• Meal plan is compact and lightweight for mountaineering logistics<br>• Incorporates foods with high energy density and minimal weight</td>
+                <td class="output"><pre>For high-altitude mountaineering performance nutrition, the diet should focus on:
+
+Key Nutritional Requirements:
+- High-calorie density
+- Lightweight, compact foods
+- Easy to digest
+- High protein and complex carbohydrates
+- Nutrient-dense options
+
+Recommended Foods:
+1. Protein Sources (lightweight):
+- Dried meats
+- Protein bars
+- Freeze-dried protein meals
+- Nuts and nut butters
+- Whey protein powder
+
+2. Complex Carbohydrates:
+- Energy gels
+- Dried fruits
+- Instant oatmeal
+- Compact energy bars
+- Dehydrated meal packets
+
+3. Healthy Fats:
+- Nuts (almonds, walnuts)
+- Seeds (chia, pumpkin)
+- Coconut chips
+- Olive oil packets
+
+4. Hydration/Electrolyte Focus:
+- Electrolyte powder
+- Compact hydration tablets
+- Lightweight sports drinks
+
+Recommended Daily Intake:
+- 4000-5000 calories
+- High protein (1.6-2g per kg bodyweight)
+- Frequent small meals
+- Easily digestible nutrients
+
+Specific considerations for high-altitude conditions will require specialized mountaineering nutrition planning.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent conceptual guidance for high-altitude nutrition, it fails to meet the mandatory requirements of specifying exact meals, portions, and timing. The nutritional strategy is sound, but the implementation details are missing, which prevents meeting the core task requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a rugby player's bulking nutrition plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 190<br><strong>weight:</strong> 110<br><strong>goal:</strong> muscle gain and performance optimization for rugby<br><strong>restrictions:</strong> no dairy, gluten-free</td>
+                <td class="criteria">• Provides 4000-4500 calories for muscle gain<br>• Includes balanced macronutrient distribution (40% protein, 35% carbs, 25% fat)<br>• Accommodates specified dietary restrictions<br>• Supports high-intensity rugby training requirements</td>
+                <td class="output"><pre>Based on the given information, here's a nutritional recommendation for this person:
+
+Macronutrient Breakdown:
+- Total Daily Calories: Approximately 3,500-4,000 calories
+- Protein: 220-240g (1.8-2.2g per kg of body weight)
+- Carbohydrates: 450-500g (high for rugby performance)
+- Healthy Fats: 90-110g
+
+Recommended Food Choices:
+
+Protein Sources (Dairy-Free, Gluten-Free):
+- Lean meats (chicken, turkey, lean beef)
+- Fish (salmon, tuna, mackerel)
+- Eggs
+- Plant-based proteins (quinoa, lentils, tofu)
+- Protein powders (pea, rice, or hemp protein)
+
+Carbohydrate Sources:
+- Sweet potatoes
+- Rice (brown, white)
+- Quinoa
+- Gluten-free oats
+- Fruits
+- Vegetables
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Seeds (chia, flax)
+- Olive oil
+- Coconut oil
+
+Supplements to Consider:
+- Creatine
+- Omega-3
+- Multivitamin
+- Electrolyte supplements
+
+Meal Timing:
+- 5-6 meals per day
+- Pre and post-workout nutrition crucial
+
+Hydration:
+- 4-5 liters of water daily
+
+Consult a sports nutritionist for personalized advice.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework, it fails to meet the mandatory requirements of specifying exact meals, portions, and timing. The macronutrient guidance is strong, but the lack of a detailed meal plan prevents it from fully addressing the original task.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a CrossFit Games competitor's intense training diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 85<br><strong>goal:</strong> Optimize performance for CrossFit Games competition<br><strong>restrictions:</strong> High protein, gluten-free diet</td>
+                <td class="criteria">• Provide 3000-3500 calorie meal plan<br>• Include macronutrient balance supporting high-intensity training<br>• Accommodate gluten-free requirement<br>• Demonstrate nutritional variety for sustained athletic performance</td>
+                <td class="output"><pre>For an athlete preparing for CrossFit Games competition, here's a recommended nutrition plan:
+
+Macronutrient Breakdown:
+- Protein: 2.2-2.5g per kg of body weight (around 170-190g protein daily)
+- Carbohydrates: 45-55% of total calories (for high-intensity training)
+- Healthy fats: 25-30% of total calories
+
+Recommended Foods:
+Proteins:
+- Grass-fed lean meats
+- Wild-caught fish
+- Eggs
+- Chicken breast
+- Turkey
+- Lean beef
+- Gluten-free protein powders
+
+Carbohydrates:
+- Sweet potatoes
+- Quinoa
+- Rice
+- Fruits
+- Vegetables
+- Gluten-free oats
+
+Healthy Fats:
+- Avocado
+- Nuts (almonds, walnuts)
+- Olive oil
+- Coconut oil
+- Salmon
+- Chia seeds
+
+Meal Timing:
+- 5-6 smaller meals per day
+- High protein and carb intake pre and post-workout
+- Hydration: 3-4 liters of water daily
+
+Supplements:
+- Whey protein
+- Creatine
+- Electrolytes
+- Multivitamin
+
+Consultation with a sports nutritionist is recommended for personalized guidance.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and food recommendations, it fails to meet the mandatory requirements of specifying daily caloric total, exact meal portions, and precise meal timing. The solution offers solid nutritional principles but lacks the specific implementation details required for a complete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a rock climbing competition athlete's nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 70<br><strong>goal:</strong> Optimize performance and recovery for rock climbing competition<br><strong>restrictions:</strong> Gluten-free diet, no dairy</td>
+                <td class="criteria">• Meal plan must provide adequate protein for muscle recovery<br>• Calorie intake should support high-intensity climbing performance<br>• Respect specified dietary restrictions<br>• Include balanced nutrition across meal times</td>
+                <td class="output"><pre>For an athlete focused on rock climbing performance and recovery, with gluten-free and dairy-free dietary needs, here's a recommended nutritional approach:
+
+Macronutrient Breakdown:
+- Protein: 1.6-2.0g per kg of body weight (112-140g daily)
+   - Lean sources like chicken, turkey, fish, eggs, tofu, quinoa
+   - Supports muscle repair and strength
+
+- Carbohydrates: 5-7g per kg of body weight (350-490g daily)
+   - Complex carbs: Sweet potatoes, rice, quinoa, gluten-free oats
+   - Supports energy and glycogen replenishment
+
+- Healthy Fats: 0.5-1.0g per kg of body weight (35-70g daily)
+   - Avocados, nuts, seeds, olive oil, fatty fish
+   - Aids inflammation reduction and hormonal balance
+
+Key Nutrition Strategies:
+- High-protein smoothies with plant-based protein
+- Anti-inflammatory foods
+- Hydration with electrolyte-rich beverages
+- Gluten-free, dairy-free recovery meals
+- Micronutrient-dense foods like leafy greens, berries
+
+Sample Meal Plan:
+- Breakfast: Quinoa porridge with almond milk, berries, chia seeds
+- Snack: Rice cakes with almond butter
+- Lunch: Grilled salmon, sweet potato, roasted vegetables
+- Post-workout: Protein shake with banana
+- Dinner: Chicken, brown rice, steamed broccoli</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework with appropriate macronutrient ratios and dietary considerations, it fails to meet the mandatory requirements of specifying daily caloric total, exact food portions, and precise meal timing. These omissions prevent the meal plan from being fully actionable for an athlete.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a competitive swimmer's metabolic needs</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 82<br><strong>goal:</strong> Optimize performance and recovery for competitive swimming training<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provides sufficient daily caloric intake for high-intensity swimming training<br>• Includes balanced macronutrient distribution for muscle recovery<br>• Accommodates specified dietary restrictions<br>• Supports hydration and energy requirements for swim athlete</td>
+                <td class="output"><pre>For this competitive swimmer with specific dietary needs, here's a tailored nutrition plan:
+
+Macronutrient Breakdown:
+- High protein intake (1.6-2.0g per kg of body weight): ~130-165g protein daily
+- Complex carbohydrates: 55-60% of total calories
+- Healthy fats: 25-30% of total calories
+
+Protein Sources (Lactose-free, no red meat):
+- Chicken
+- Turkey
+- Fish (salmon, tuna, mackerel)
+- Eggs
+- Plant proteins (tofu, tempeh, legumes)
+- Whey protein isolate or plant-based protein powders
+
+Carbohydrate Sources:
+- Whole grains (quinoa, brown rice, oats)
+- Sweet potatoes
+- Fruits
+- Vegetables
+
+Healthy Fats:
+- Avocados
+- Nuts and seeds
+- Olive oil
+- Fatty fish
+
+Specific Recommendations:
+- High-calorie diet (3500-4000 calories/day)
+- Hydration: 3-4 liters of water daily
+- Electrolyte-rich foods
+- Recovery smoothies with protein and carbs
+- Calcium-fortified non-dairy alternatives
+
+Timing:
+- Pre-workout: Complex carbs, lean protein
+- Post-workout: Protein and quick-absorbing carbs
+
+Supplements to Consider:
+- Omega-3
+- Vitamin D
+- Magnesium</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and considerations for a competitive swimmer, it fails to meet the MANDATORY requirements of specifying exact daily meals, precise portions, and a total daily caloric intake. The nutritional framework is strong, but the lack of a concrete meal plan means the solution does not fully satisfy the original task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a collegiate basketball player's nutrition strategy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 198<br><strong>weight:</strong> 95<br><strong>goal:</strong> Muscle maintenance and game performance optimization<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provides balanced macronutrient distribution for athlete<br>• Meets daily caloric requirements for high-intensity basketball training<br>• Accommodates specified dietary restrictions<br>• Includes pre and post-workout nutrition recommendations</td>
+                <td class="output"><pre>Based on the given information, here's a recommended dietary approach:
+
+Nutritional Profile:
+- Likely a tall, athletic individual (possibly a basketball or volleyball player)
+- Focus on high-protein, nutrient-dense foods
+- Avoid lactose and red meat
+
+Recommended Diet Plan:
+
+Protein Sources:
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna, tilapia)
+- Eggs
+- Plant-based proteins: tofu, tempeh, legumes
+- Whey protein isolate (lactose-free)
+
+Carbohydrates:
+- Brown rice
+- Quinoa
+- Sweet potatoes
+- Whole grain pasta
+- Oats
+
+Healthy Fats:
+- Avocado
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Coconut oil
+
+Key Recommendations:
+- High protein intake (1.6-2.2g per kg of body weight)
+- Complex carbohydrates for sustained energy
+- Plenty of fruits and vegetables
+- Hydration
+- Consider lactose-free dairy alternatives
+- Supplementation: Vitamin D, Omega-3, Multivitamin
+
+Meal Frequency: 5-6 smaller meals per day to maintain consistent energy and muscle recovery.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework, it fails to meet the mandatory requirements of specifying daily caloric intake, exact macronutrient breakdown, and detailed meal plan with precise portions and timing. The generalized approach lacks the specificity needed for an athlete's precise nutritional needs.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a rowing team member's performance diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 188<br><strong>weight:</strong> 92<br><strong>goal:</strong> Optimize performance and muscle recovery for competitive rowing<br><strong>restrictions:</strong> No dairy, gluten-sensitive</td>
+                <td class="criteria">• Provides balanced macronutrient distribution suitable for high-intensity athlete<br>• Accommodates specified dietary restrictions<br>• Supports energy needs for rowing training<br>• Includes strategic meal timing for performance and recovery</td>
+                <td class="output"><pre>For this competitive rower with height 188 cm and weight 92 kg, here's a tailored nutrition plan:
+
+Macronutrient Breakdown:
+- Protein: 2.2-2.4g per kg of body weight (203-220g daily)
+- Carbohydrates: 5-7g per kg of body weight (460-644g daily)
+- Healthy fats: 0.8-1.2g per kg of body weight (74-110g daily)
+
+Key Dietary Recommendations:
+1. Protein Sources (dairy-free):
+- Lean meats (chicken, turkey)
+- Fish (salmon, tuna)
+- Eggs
+- Plant proteins (quinoa, tofu, legumes)
+- Protein powders (pea, rice, hemp)
+
+2. Gluten-Free Carbohydrates:
+- Rice
+- Quinoa
+- Sweet potatoes
+- Gluten-free oats
+- Fruits
+- Vegetables
+
+3. Healthy Fats:
+- Avocados
+- Nuts and seeds
+- Olive oil
+- Coconut oil
+- Fatty fish
+
+Meal Timing:
+- Pre-workout: Complex carbs, lean protein
+- Post-workout: High protein, quick-absorbing carbs
+- Frequent, balanced meals (5-6 per day)
+
+Hydration: 3-4 liters of water daily
+
+Supplements:
+- Omega-3
+- Vitamin D
+- Magnesium
+- Protein powder</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and strategic recommendations for a competitive rower, it fails to meet the mandatory requirements of specifying daily caloric total, exact meal compositions, and precise meal timing. The nutritional framework is strong, but lacks the specific implementation details required for a complete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a winter sports athlete's high-energy meal plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 85<br><strong>goal:</strong> Peak performance in alpine skiing with muscle recovery and sustained energy<br><strong>restrictions:</strong> Dairy-free, gluten-sensitive</td>
+                <td class="criteria">• Provides 3500-4000 calories suitable for high-intensity winter sports<br>• Includes balanced macronutrient distribution (40% carbs, 30% protein, 30% healthy fats)<br>• Accommodates specified dietary restrictions<br>• Offers meal timing optimized for athletic performance and recovery</td>
+                <td class="output"><pre>Based on the given information, here's a recommended nutrition plan for peak performance in alpine skiing:
+
+Macronutrient Breakdown:
+- Protein: 30-35% of calories (for muscle recovery and maintenance)
+- Carbohydrates: 45-50% of calories (for sustained energy)
+- Healthy Fats: 20-25% of calories (for hormone balance and joint health)
+
+Recommended Diet Approach:
+1. Protein Sources (Dairy-free, Gluten-free):
+- Lean meats (chicken, turkey, lean beef)
+- Fish (salmon, trout)
+- Eggs
+- Plant proteins (quinoa, lentils, beans)
+- Protein powders (pea, rice, hemp)
+
+2. Carbohydrates:
+- Sweet potatoes
+- Quinoa
+- Rice
+- Gluten-free oats
+- Fruits (berries, bananas)
+
+3. Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Seeds (chia, flax)
+- Olive oil
+- Coconut oil
+
+Meal Timing:
+- Pre-ski: Complex carbs + lean protein
+- During ski: Electrolyte-rich snacks
+- Post-ski: Protein + quick-absorbing carbs for recovery
+
+Supplements to Consider:
+- Omega-3
+- Vitamin D
+- Magnesium
+- Protein powder
+
+Hydration: 3-4 liters of water daily</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework for an alpine skier, it fails to meet the mandatory requirements of specifying daily caloric intake, exact meal portions, and a complete meal schedule. The nutritional guidance is sound, but lacks the precise implementation details needed for a comprehensive meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a parkour athlete's agility-focused diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 72<br><strong>goal:</strong> Maintain high-energy performance for parkour training and urban movement<br><strong>restrictions:</strong> No dairy, prefer plant-based protein sources</td>
+                <td class="criteria">• Meal plan must provide adequate protein for muscle recovery<br>• Include balanced macronutrient distribution for sustained energy<br>• Support agility and quick muscle responsiveness<br>• Accommodate plant-based dietary restrictions</td>
+                <td class="output"><pre>For this individual focused on high-energy parkour performance, here's a recommended diet plan:
+
+Nutritional Profile:
+- Calories: Around 2,600-2,800 kcal/day (based on active lifestyle)
+- Protein: 120-140g (high for muscle recovery and performance)
+- Carbohydrates: 350-400g (for sustained energy)
+- Healthy fats: 70-90g
+
+Recommended Food Choices:
+
+Protein Sources:
+- Tofu
+- Tempeh
+- Seitan
+- Lentils
+- Quinoa
+- Plant-based protein powders
+- Beans
+- Edamame
+- Hemp seeds
+
+Carbohydrates:
+- Sweet potatoes
+- Brown rice
+- Quinoa
+- Oats
+- Whole grain bread
+- Fruits (bananas, berries)
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Chia seeds
+- Flaxseeds
+- Olive oil
+
+Hydration & Supplements:
+- High water intake
+- Vegan BCAA supplements
+- Creatine
+- Vitamin B12
+
+Meal Timing:
+- 5-6 smaller meals
+- Pre and post-workout nutrition focus
+
+This diet supports high-energy performance with plant-based, dairy-free nutrition.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework and food recommendations, it fails to meet the MANDATORY requirements of specifying exact meals, portions, and timing. The nutritional strategy is sound, but the implementation details are missing, which prevents full compliance with the task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional surfer's coastal athlete nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 82<br><strong>goal:</strong> maintain high-energy performance for professional surfing competitions<br><strong>restrictions:</strong> dairy-free, prefers pescatarian options</td>
+                <td class="criteria">• Provides balanced nutrition for high-intensity coastal athletic performance<br>• Meets caloric requirements for a professional surfer<br>• Accommodates specified dietary restrictions<br>• Includes hydration and energy-sustaining meal components</td>
+                <td class="output"><pre>Based on the provided information, here's a recommended nutrition plan for this professional surfer:
+
+Nutritional Profile:
+- Likely a male athlete
+- Height: 185 cm
+- Weight: 82 kg
+- High-energy performance needs
+- Dairy-free
+- Pescatarian preference
+
+Recommended Diet Strategy:
+
+Macronutrient Breakdown:
+- Protein: 2-2.2g per kg of body weight (164-180g daily)
+- Sources: Fish, seafood, eggs, plant-based proteins
+- Carbohydrates: 5-7g per kg of body weight (410-574g daily)
+- Healthy fats: 20-30% of total calories
+
+Food Recommendations:
+1. Proteins:
+- Salmon
+- Tuna
+- Sardines
+- Mackerel
+- Shrimp
+- Egg whites
+- Tofu
+- Legumes
+
+2. Complex Carbohydrates:
+- Sweet potatoes
+- Quinoa
+- Brown rice
+- Oats
+- Whole grain bread
+
+3. Healthy Fats:
+- Avocado
+- Olive oil
+- Nuts
+- Seeds
+- Fatty fish
+
+Hydration: 3-4 liters of water daily
+
+Meal Timing: 5-6 smaller meals to maintain energy
+
+Supplements to Consider:
+- Omega-3
+- Vitamin D
+- Electrolyte supplements</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework and strategic approach, it fails to meet the mandatory requirements of specifying daily caloric total, exact food portions, and precise meal timing. The nutritional guidance is strong, but the lack of specific implementation details means the solution cannot fully satisfy the task requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with an alpine skier's high-altitude nutrition needs</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 82<br><strong>goal:</strong> Maintain high-energy performance for alpine skiing competitions at high altitude<br><strong>restrictions:</strong> Gluten-free diet, no dairy</td>
+                <td class="criteria">• Provides sufficient caloric intake for high-altitude athletic performance<br>• Meets gluten-free and dairy-free dietary restrictions<br>• Includes balanced macronutrient distribution for endurance and recovery<br>• Supports hydration and electrolyte needs for alpine skiing</td>
+                <td class="output"><pre>For an alpine skier with these specifications, here's a recommended nutritional approach:
+
+Macro & Nutritional Strategy:
+1. Calorie Intake: Approximately 3,000-3,500 calories/day
+
+Protein Sources (Gluten-free, dairy-free):
+- Lean meats: Chicken, turkey, lean beef
+- Fish: Salmon, trout (high in omega-3)
+- Eggs
+- Plant proteins: Quinoa, legumes, tofu
+- Protein powders (pea, rice protein)
+
+Carbohydrates:
+- Sweet potatoes
+- Rice
+- Quinoa
+- Gluten-free oats
+- Fruits: Bananas, berries
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Coconut oil
+- Nut butters
+
+Performance Boosters:
+- Beetroot juice (improves altitude performance)
+- Chia seeds
+- Spirulina
+- Electrolyte-rich foods
+
+Hydration:
+- Plenty of water
+- Herbal teas
+- Electrolyte drinks
+
+Supplements to Consider:
+- Vitamin D
+- Magnesium
+- Omega-3
+- Protein supplements
+
+Focus: High-energy, nutrient-dense, gluten-free, dairy-free diet supporting athletic performance.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional overview for an alpine skier, it critically fails the mandatory requirements by not specifying exact meals, portions, and meal timing. The strategy is sound, but the implementation details are missing, which prevents meeting the core task requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a long-distance open water swimmer's diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 82<br><strong>goal:</strong> optimize endurance performance for long-distance open water swimming<br><strong>restrictions:</strong> dairy-free, no shellfish</td>
+                <td class="criteria">• Provide 3000-3500 daily calories<br>• Include high-carbohydrate meals for sustained energy<br>• Ensure adequate protein for muscle recovery<br>• Balance macronutrients for open water swimming performance</td>
+                <td class="output"><pre>For an endurance athlete focusing on long-distance open water swimming, here's a recommended dietary approach:
+
+Macronutrient Breakdown:
+- Carbohydrates: 55-65% of total calories (crucial for sustained energy)
+- Protein: 15-20% of total calories (muscle recovery and maintenance)
+- Healthy Fats: 20-25% of total calories (hormonal balance, inflammation management)
+
+Specific Recommendations:
+1. Protein Sources (dairy-free):
+- Lean chicken
+- Turkey
+- Fish (salmon, tuna)
+- Eggs
+- Plant proteins: tofu, tempeh, legumes
+- Lean beef occasionally
+
+2. Carbohydrates:
+- Whole grains (quinoa, brown rice, oats)
+- Sweet potatoes
+- Fruits
+- Vegetables
+- Whole grain breads
+
+3. Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Seeds (chia, flax)
+- Olive oil
+- Coconut oil
+
+Hydration:
+- Minimum 3-4 liters water daily
+- Electrolyte replacement during long training sessions
+
+Micronutrient Focus:
+- Omega-3s
+- Vitamin D
+- Magnesium
+- Iron
+
+Meal Timing:
+- Frequent, smaller meals
+- Significant pre and post-workout nutrition
+
+Would you like a more detailed meal plan?</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and principles for an endurance swimmer, it fails to meet the mandatory requirements of specifying daily caloric intake, exact meal portions, and precise meal timing. The output reads more like nutritional guidelines than a concrete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a track and field sprinter's explosive energy diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 82<br><strong>goal:</strong> Maximize explosive sprint performance and muscle recovery<br><strong>restrictions:</strong> No dairy, gluten-free</td>
+                <td class="criteria">• Meal plan must provide sufficient protein for muscle recovery<br>• Total daily calories should support high-intensity athletic performance<br>• Include balanced macronutrient distribution for energy and muscle maintenance<br>• Accommodate specified dietary restrictions</td>
+                <td class="output"><pre>Based on the goal of maximizing explosive sprint performance and muscle recovery, while considering the dietary restrictions, here's a recommended nutritional approach:
+
+Macronutrient Breakdown:
+- Protein: 25-30% of total calories (high for muscle recovery)
+- Carbohydrates: 45-50% of total calories (for energy and glycogen replenishment)
+- Healthy Fats: 20-25% of total calories
+
+Specific Recommendations:
+
+Proteins (Dairy-Free, Gluten-Free):
+- Lean meats: Chicken, turkey, lean beef
+- Fish: Salmon, tuna (rich in omega-3)
+- Eggs
+- Plant-based proteins: Quinoa, tofu, tempeh, pea protein
+
+Carbohydrates:
+- Sweet potatoes
+- Brown rice
+- Quinoa
+- Fruits: Bananas, berries
+- Gluten-free oats
+
+Recovery Foods:
+- Tart cherry juice (reduces muscle inflammation)
+- Beetroot juice (improves sprint performance)
+- Nuts and seeds
+- Coconut water
+
+Supplements:
+- Whey protein isolate (lactose-free)
+- Creatine
+- Electrolyte supplements
+
+Hydration is crucial. Aim for 3-4 liters of water daily.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and considers the athlete's performance goals, it fails to meet the mandatory requirements of specifying daily caloric intake, exact meal portions, and a structured meal plan. The macronutrient recommendations are solid, but the lack of precise implementation details means the solution does not fully satisfy the task requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a competitive cyclist's endurance nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 182<br><strong>weight:</strong> 75<br><strong>goal:</strong> Optimize endurance performance for competitive road cycling<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provide calorie intake matching cyclist's metabolic needs (2800-3200 calories)<br>• Balance macronutrients for sustained energy (55-65% carbohydrates)<br>• Include meal timing strategies supporting high-intensity training<br>• Accommodate specified dietary restrictions</td>
+                <td class="output"><pre>For an endurance cyclist with these specifications, I recommend a nutrition strategy focused on:
+
+Macronutrient Breakdown:
+- Carbohydrates: 55-65% of total calories (crucial for cycling endurance)
+- Protein: 15-20% of total calories
+- Healthy fats: 20-25% of total calories
+
+Specific Recommendations:
+1. Carbohydrate Sources:
+- Whole grains (quinoa, brown rice, oats)
+- Sweet potatoes
+- Fruits (bananas, berries)
+- Whole wheat pasta
+- Energy-dense complex carbs
+
+2. Protein Sources (dairy-free, lean):
+- Chicken
+- Fish (salmon, tuna)
+- Turkey
+- Plant proteins (tofu, tempeh)
+- Eggs
+- Legumes
+- Protein powders (pea, rice protein)
+
+3. Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Chia seeds
+- Olive oil
+- Coconut oil
+
+Hydration & Supplements:
+- Electrolyte drinks
+- Potential supplements: Vitamin D, omega-3s
+- Consistent water intake
+
+Daily Calorie Estimate: ~3000-3500 calories (based on high training volume)
+
+Meal Timing:
+- Pre-ride: Complex carbs, moderate protein
+- During ride: Energy gels, electrolyte drinks
+- Post-ride: Protein + carbohydrate recovery meal</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance for an endurance cyclist, it fails to meet the mandatory requirements of specifying exact meals, portions, and precise daily caloric intake. The macronutrient recommendations are solid, but the lack of a structured meal plan prevents full compliance with the task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with an Olympic gymnast's precision nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 168<br><strong>weight:</strong> 62<br><strong>goal:</strong> Olympic gymnastic performance optimization<br><strong>restrictions:</strong> Gluten-free, high-protein, no dairy</td>
+                <td class="criteria">• Provides precise caloric intake matching gymnast's metabolic needs<br>• Ensures balanced macronutrient distribution for peak performance<br>• Accommodates specified dietary restrictions<br>• Supports muscle recovery and energy requirements</td>
+                <td class="output"><pre>For an Olympic gymnastic performance optimization diet, considering the specific restrictions and physical demands, here's a recommended nutrition plan:
+
+Macronutrient Breakdown:
+- Protein: 2.2-2.5g per kg of body weight (about 140-155g daily)
+- Carbohydrates: 55-60% of total calories (complex carbs)
+- Healthy fats: 20-25% of total calories
+
+Recommended Foods:
+Proteins:
+- Lean chicken breast
+- Turkey
+- Fish (salmon, tuna)
+- Eggs
+- Gluten-free protein powder (pea, rice protein)
+- Tofu
+- Lean beef
+
+Carbohydrates:
+- Quinoa
+- Sweet potatoes
+- Brown rice
+- Gluten-free oats
+- Fruits (bananas, berries)
+- Vegetables
+
+Healthy Fats:
+- Avocado
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Coconut oil
+
+Hydration:
+- Water
+- Electrolyte drinks
+- Herbal teas
+
+Supplements:
+- Vitamin D
+- Calcium (non-dairy sources)
+- Magnesium
+- Omega-3
+
+Meal frequency: 5-6 smaller meals daily</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework for an Olympic gymnast, it fails to meet the mandatory requirements of specifying daily caloric intake, exact macronutrient quantities, and a detailed meal plan with precise portions and timing. The nutritional guidance is sound, but lacks the specificity needed for a high-performance athlete.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional boxer's weight management nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 75<br><strong>goal:</strong> weight maintenance and performance optimization for middleweight boxing<br><strong>restrictions:</strong> no red meat, low sodium, high protein requirements</td>
+                <td class="criteria">• Provides 3-4 balanced meals matching athlete's caloric needs<br>• Ensures adequate protein intake for muscle recovery<br>• Maintains weight within competition weight class range<br>• Supports high-intensity training energy requirements</td>
+                <td class="output"><pre>For a 180 cm, 75 kg middleweight boxer focusing on weight maintenance and performance optimization, here's a recommended diet:
+
+Protein Sources (Low-Fat, No Red Meat):
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna, tilapia)
+- Egg whites
+- Greek yogurt
+- Whey protein supplements
+- Plant-based proteins (tofu, tempeh, legumes)
+
+Recommended Daily Intake:
+- Protein: 2.2-2.5g per kg of body weight (165-187g daily)
+- Carbohydrates: 5-7g per kg of body weight (375-525g daily)
+- Healthy fats: 0.5-1g per kg of body weight (37-75g daily)
+
+Meal Plan Guidelines:
+- 5-6 smaller meals per day
+- High-protein, low-sodium options
+- Complex carbohydrates for sustained energy
+- Hydration: 3-4 liters of water daily
+
+Sample Day:
+- Breakfast: Egg white omelet, oatmeal, berries
+- Mid-morning: Protein shake, almonds
+- Lunch: Grilled chicken, quinoa, steamed vegetables
+- Pre-workout: Greek yogurt, banana
+- Post-workout: Whey protein, sweet potato
+- Dinner: Baked fish, brown rice, roasted vegetables
+
+Supplements to Consider:
+- Multivitamin
+- Omega-3
+- Creatine
+- Electrolyte replacements
+
+Consult a sports nutritionist for personalized advice.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">The solution provides a solid nutritional framework for a middleweight boxer but fails to meet the mandatory requirements of specifying daily caloric total, precise macronutrient breakdown with exact quantities, and detailed meal portions/timing. While the nutritional approach is sound, the lack of specific quantitative details prevents full compliance with the task requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a trail runner's wilderness nutrition strategy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 72<br><strong>goal:</strong> Maintain endurance performance during long trail running expeditions<br><strong>restrictions:</strong> Gluten-free, prefers whole foods, requires high-calorie density</td>
+                <td class="criteria">• Provides minimum 3000 calories suitable for high-intensity trail running<br>• Includes portable, lightweight meal options for wilderness conditions<br>• Ensures balanced macronutrient distribution (carbs/protein/fats)<br>• Accommodates specified dietary restrictions</td>
+                <td class="output"><pre>For an endurance trail runner with the given specifications, I recommend a nutrition plan focused on:
+
+Macronutrient Profile:
+- Carbohydrates: 55-65% of total calories (complex, slow-release)
+- Protein: 15-20% (lean sources)
+- Healthy Fats: 20-25%
+
+Specific Food Recommendations:
+1. Gluten-Free Carbohydrate Sources:
+- Quinoa
+- Sweet potatoes
+- Rice (brown, white)
+- Gluten-free oats
+- Buckwheat
+- Amaranth
+
+2. Protein Sources:
+- Lean meats (chicken, turkey)
+- Fish (salmon, sardines)
+- Eggs
+- Legumes
+- Nuts and seeds
+
+3. High-Calorie Dense Foods:
+- Nut butters (almond, cashew)
+- Avocados
+- Coconut (oil, flakes)
+- Dried fruits
+- Olive oil
+- Chia seeds
+- Trail mix
+
+Hydration & Performance Supplements:
+- Electrolyte drinks
+- Protein shakes
+- Energy gels (gluten-free)
+
+Meal Timing:
+- Frequent, smaller meals
+- Pre and post-workout nutrition
+- Consistent calorie intake
+
+Specific Considerations:
+- High nutrient density
+- Easy digestibility
+- Sustained energy release</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and food recommendations, it critically fails the mandatory requirements by not specifying daily caloric total, precise macronutrient quantities, and exact meal compositions. The solution offers strategic nutritional insights but does not provide the concrete meal plan details required for an athlete's precise nutritional needs.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a rugby sevens player's quick recovery nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 92<br><strong>goal:</strong> rapid muscle recovery and sustained energy for rugby sevens tournament<br><strong>restrictions:</strong> no dairy, gluten-free</td>
+                <td class="criteria">• Meal plan must provide minimum 3000 calories<br>• Include balanced macronutrient distribution for high-intensity sport<br>• Accommodate specified dietary restrictions<br>• Optimize post-exercise recovery nutrition</td>
+                <td class="output"><pre>For a rugby sevens athlete with these specifications, here's a nutrition plan focusing on muscle recovery and sustained energy:
+
+Macronutrient Breakdown:
+- High protein intake (1.6-2.2g per kg of body weight)
+- Complex carbohydrates for sustained energy
+- Healthy fats for hormone production and recovery
+
+Recommended Foods:
+Proteins:
+- Lean meats (chicken, turkey, lean beef)
+- Fish (salmon, tuna)
+- Eggs
+- Plant-based proteins (quinoa, lentils, tofu)
+
+Carbohydrates:
+- Sweet potatoes
+- Rice (white/brown)
+- Gluten-free oats
+- Quinoa
+- Fruits (bananas, berries)
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Seeds (chia, flax)
+- Olive oil
+
+Recovery-Specific Foods:
+- Tart cherry juice (inflammation reduction)
+- Beetroot juice (performance enhancement)
+- Turmeric
+- Ginger
+
+Hydration:
+- Electrolyte-rich drinks
+- Water
+- Coconut water
+
+Meal Timing:
+- Frequent small meals
+- Protein and carb intake within 30 minutes post-workout
+
+Supplements (if needed):
+- Gluten-free protein powder
+- BCAAs
+- Electrolyte supplements</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework for a rugby athlete, it fails to meet the mandatory requirements of specifying daily calories, precise meal portions, and exact macronutrient percentages. The strategic approach is sound, but lacks the critical implementation details needed for a complete meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a competitive climber's lightweight meal plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 68<br><strong>goal:</strong> maintain lean muscle and optimize climbing performance<br><strong>restrictions:</strong> gluten-free, no red meat</td>
+                <td class="criteria">• Meal plan must total between 2400-2600 calories<br>• Protein intake should be 1.6-2.0g per kg of body weight<br>• Include balanced macronutrient distribution for climbing performance<br>• Accommodate specified dietary restrictions</td>
+                <td class="output"><pre>Based on the provided information, here's a nutrition recommendation:
+
+Macronutrient Breakdown:
+- Protein: 1.6-2.0g per kg of body weight (Around 109-136g protein daily)
+- Carbohydrates: 45-55% of total calories (focus on complex carbs)
+- Healthy fats: 25-30% of total calories
+
+Recommended Food Options:
+
+Protein Sources:
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna, mackerel)
+- Greek yogurt
+- Eggs
+- Tofu
+- Gluten-free protein powders
+- Quinoa
+- Legumes
+
+Carbohydrate Sources:
+- Sweet potatoes
+- Brown rice
+- Quinoa
+- Oats (gluten-free)
+- Fruits
+- Vegetables
+
+Healthy Fat Sources:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Fatty fish
+- Coconut
+
+Climbing Performance Boosters:
+- Berries
+- Spinach
+- Beets
+- Nut butters
+- Hydration-rich foods
+
+Meal Timing:
+- Eat every 3-4 hours
+- Protein and carbs within 30 minutes post-workout
+
+Supplements to Consider:
+- Whey/plant protein
+- Creatine
+- Omega-3</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and food recommendations, it fails to meet the MANDATORY requirements of specifying daily calories, exact meals, portions, and timing. The output is more of a nutritional framework than a concrete 1-day meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional kayaker's water sports diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 182<br><strong>weight:</strong> 82<br><strong>goal:</strong> Maintain high energy levels for competitive kayaking and optimize performance during multi-hour river expeditions<br><strong>restrictions:</strong> Gluten-free diet, no dairy products</td>
+                <td class="criteria">• Provide a 1-day meal plan with minimum 3000 calories<br>• Include balanced macronutrient distribution for endurance athletes<br>• Ensure meal plan is gluten-free and dairy-free<br>• Support hydration and electrolyte needs for water sports</td>
+                <td class="output"><pre>Based on the provided information, here's a recommended nutrition plan for this competitive kayaker:
+
+Nutritional Focus:
+1. High-energy, nutrient-dense foods
+2. Gluten-free options
+3. Dairy-free alternatives
+4. Balanced macronutrients to support endurance and performance
+
+Recommended Diet:
+
+Protein Sources:
+- Lean meats (chicken, turkey, fish)
+- Eggs
+- Plant-based proteins (quinoa, lentils, beans)
+- Nuts and seeds
+- Salmon and other fatty fish for omega-3s
+
+Carbohydrates:
+- Gluten-free grains (quinoa, rice, buckwheat)
+- Sweet potatoes
+- Fruits
+- Gluten-free oats
+
+Healthy Fats:
+- Avocados
+- Olive oil
+- Coconut oil
+- Nuts and seeds
+- Chia seeds
+
+Hydration and Performance Supplements:
+- Electrolyte drinks
+- Gluten-free energy bars
+- Coconut water
+- Bone broth
+
+Meal Timing:
+- Small, frequent meals
+- Pre-workout and post-workout nutrition
+- High-carb, moderate protein meals before long expeditions
+
+Consider consulting a sports nutritionist for personalized advice.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent general nutritional guidance for a competitive kayaker with gluten-free and dairy-free requirements, it fundamentally fails the MANDATORY requirements by not presenting a concrete 1-day meal plan with specific calories, macronutrient ratios, and exact meal compositions. The output reads more like nutritional advice than an actionable meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a polo player's high-intensity meal strategy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 82<br><strong>goal:</strong> maintain peak performance during polo tournament week<br><strong>restrictions:</strong> lactose intolerant, no red meat</td>
+                <td class="criteria">• Provides balanced nutrition for high-intensity sport<br>• Accommodates specified dietary restrictions<br>• Supports energy requirements for polo athlete<br>• Includes hydration and meal timing recommendations</td>
+                <td class="output"><pre>For an athlete preparing for a polo tournament, here's a recommended nutrition plan:
+
+Macronutrient Balance:
+- High protein intake (1.6-2g per kg body weight)
+- Complex carbohydrates for sustained energy
+- Healthy fats for recovery and hormone balance
+
+Daily Meal Recommendations:
+1. Breakfast:
+- Quinoa porridge with almond milk
+- Grilled chicken or turkey
+- Mixed berries
+- Chia seeds
+
+2. Mid-Morning Snack:
+- Protein smoothie (plant-based protein)
+- Banana
+- Handful of almonds
+
+3. Lunch:
+- Grilled fish (salmon or white fish)
+- Sweet potato
+- Steamed green vegetables
+- Olive oil dressing
+
+4. Afternoon Snack:
+- Greek yogurt alternative (coconut-based)
+- Mixed nuts
+- Apple
+
+5. Dinner:
+- Chicken or turkey breast
+- Brown rice
+- Roasted vegetables
+- Avocado
+
+Hydration:
+- 3-4 liters of water daily
+- Electrolyte drinks during tournament
+
+Supplements:
+- Calcium supplement
+- Vitamin D
+- Omega-3
+- Protein powder (plant-based)
+
+Key focus: High-protein, easily digestible foods supporting performance and recovery.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">The solution provides a thoughtful meal plan that addresses dietary restrictions and athletic needs. However, it fails to meet the mandatory requirements of specifying daily caloric intake, precise macronutrient breakdown, and exact food portions/timing. These omissions prevent the solution from fully satisfying the core requirements for a comprehensive athlete nutrition plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a competitive figure skater's performance nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 168<br><strong>weight:</strong> 58<br><strong>goal:</strong> Optimize performance and recovery for competitive figure skating training<br><strong>restrictions:</strong> Lactose intolerant, prefers low-processed foods</td>
+                <td class="criteria">• Provide balanced macronutrient distribution suitable for high-intensity athletic performance<br>• Accommodate lactose intolerance while ensuring calcium intake<br>• Include pre and post-training nutritional strategies<br>• Maintain total daily caloric intake appropriate for athlete's body composition and training demands</td>
+                <td class="output"><pre>For a competitive figure skater with these specifications, I'll provide a comprehensive nutritional approach:
+
+Macronutrient Breakdown:
+- Calories: Approximately 2,400-2,600 per day (based on age, activity level)
+- Protein: 1.6-2.0g per kg of body weight (roughly 90-115g daily)
+- Carbohydrates: 5-7g per kg of body weight (285-405g daily)
+- Healthy fats: 20-30% of total calories
+
+Recommended Food Choices:
+
+Proteins (Lactose-Free):
+- Lean meats (chicken, turkey)
+- Fish (salmon, tuna)
+- Eggs
+- Plant-based proteins (tofu, tempeh)
+- Legumes
+- Nuts and seeds
+
+Carbohydrates:
+- Whole grains (quinoa, brown rice)
+- Sweet potatoes
+- Oats
+- Fruits
+- Vegetables
+
+Healthy Fats:
+- Avocados
+- Olive oil
+- Nuts
+- Seeds
+- Coconut
+
+Hydration & Recovery:
+- Water
+- Electrolyte drinks
+- Tart cherry juice for muscle recovery
+
+Calcium Sources (Lactose-Free):
+- Fortified plant milks
+- Dark leafy greens
+- Calcium-fortified foods
+
+Supplements to Consider:
+- Vitamin D
+- Omega-3
+- Calcium
+- Magnesium
+
+Key focus: Nutrient-dense, whole foods supporting high-intensity training.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and food recommendations, it fails to meet the mandatory requirements of specifying exact meals, portions, and precise timing. The macronutrient guidance is strong, but the lack of a concrete meal plan prevents full compliance with the task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional baseball player's daily nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 190<br><strong>weight:</strong> 95<br><strong>goal:</strong> Muscle maintenance and high-performance recovery for baseball season<br><strong>restrictions:</strong> Gluten-free diet, no red meat</td>
+                <td class="criteria">• Provides daily caloric intake matching athlete's metabolic needs<br>• Includes balanced macronutrient distribution for baseball performance<br>• Accommodates specified dietary restrictions<br>• Supports muscle recovery and energy requirements</td>
+                <td class="output"><pre>Based on the given information, here's a nutritional recommendation:
+
+Macronutrient Breakdown:
+- Protein: 1.6-2.2g per kg of body weight (for muscle maintenance)
+- Approximately 180-210g of protein daily
+- Focus on lean protein sources like:
+  * Chicken breast
+  * Turkey
+  * Fish (salmon, tuna, cod)
+  * Greek yogurt
+  * Egg whites
+  * Tofu
+  * Whey protein (gluten-free)
+
+Carbohydrates:
+- Complex carbs for sustained energy
+  * Sweet potatoes
+  * Quinoa
+  * Brown rice
+  * Gluten-free oats
+  * Fruits and vegetables
+
+Healthy Fats:
+- Avocados
+- Nuts and seeds
+- Olive oil
+- Fatty fish
+
+Meal Timing:
+- 5-6 smaller meals per day
+- High-protein meals post-workout
+- Balanced meals with protein, complex carbs, and healthy fats
+
+Supplements:
+- Gluten-free protein powder
+- Creatine
+- Electrolytes
+- Multivitamin
+
+Hydration:
+- 3-4 liters of water daily
+- Electrolyte drinks during intense training
+
+Consult a sports nutritionist for personalized advice.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides solid nutritional guidance, it fails to meet the mandatory requirements of specifying daily caloric total, precise macronutrient breakdown, and exact meals with portions and timing. The recommendations are general and lack the specificity needed for an athlete's precise nutritional plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional wrestler's weight class nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 102<br><strong>goal:</strong> Maintain muscle mass and optimize performance for heavyweight wrestling division<br><strong>restrictions:</strong> High protein requirement, no shellfish, gluten-sensitive</td>
+                <td class="criteria">• Provide total daily caloric intake matching athlete's weight and performance goals<br>• Include balanced macronutrient distribution with emphasis on protein<br>• Accommodate specified dietary restrictions<br>• Design meal plan suitable for intense athletic training</td>
+                <td class="output"><pre>Based on the provided information, here's a dietary recommendation:
+
+Nutritional Approach:
+1. Daily Calorie Intake: Around 3,000-3,500 calories
+2. Macronutrient Breakdown:
+- Protein: 180-220g per day (1.8-2.2g per kg of body weight)
+- Carbohydrates: 350-400g
+- Healthy Fats: 80-100g
+
+Recommended Food Options:
+Proteins:
+- Lean beef
+- Chicken breast
+- Turkey
+- Fish (salmon, cod)
+- Eggs
+- Greek yogurt
+- Gluten-free protein powders
+
+Carbohydrates:
+- Quinoa
+- Sweet potatoes
+- Brown rice
+- Gluten-free oats
+- Fruits
+- Vegetables
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Coconut oil
+
+Specific Recommendations:
+- 5-6 smaller meals per day
+- Hydration: 3-4 liters of water daily
+- Gluten-free grains
+- Supplement with multivitamins
+- Consider creatine for muscle maintenance
+
+Meal timing around training is crucial for performance and recovery.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework, it fails to meet the mandatory requirements of specifying exact meals, portions, and timing. The nutritional guidance is sound, but the lack of a concrete meal plan prevents it from fully addressing the task requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with an extreme sports athlete's high-metabolism diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 185<br><strong>weight:</strong> 85<br><strong>goal:</strong> High-performance mountain biking endurance and muscle recovery<br><strong>restrictions:</strong> Gluten-free, no dairy</td>
+                <td class="criteria">• Provide total daily caloric intake matching athlete's metabolic needs<br>• Include balanced macronutrient distribution for endurance sports<br>• Ensure meal plan is gluten-free and dairy-free<br>• Design meals that support high-intensity training recovery</td>
+                <td class="output"><pre>For a high-performance mountain biker with gluten-free and dairy-free dietary restrictions, here's a nutrition recommendation:
+
+Macronutrient Breakdown:
+- Calories: Approximately 3,200-3,500 per day
+- Protein: 130-140g (1.6-1.8g per kg of body weight)
+- Carbohydrates: 450-500g (for endurance training)
+- Healthy Fats: 90-110g
+
+Key Foods:
+Proteins:
+- Lean meats (chicken, turkey, lean beef)
+- Fish (salmon, tuna)
+- Eggs
+- Plant proteins (quinoa, tofu, legumes)
+
+Carbohydrates:
+- Sweet potatoes
+- Rice
+- Gluten-free oats
+- Quinoa
+- Fruits (bananas, berries)
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Coconut
+
+Recovery Foods:
+- Protein smoothies with plant-based protein
+- Tart cherry juice
+- Gluten-free recovery bars
+- Salmon
+- Nuts and seeds
+
+Supplements to Consider:
+- Gluten-free protein powder
+- Electrolyte supplements
+- Omega-3
+- Vitamin D
+
+Hydration: 3-4 liters of water daily</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidance and meets many criteria, it fails the MANDATORY requirements by not including specific meals, exact portions, and a precise daily caloric total tailored to the individual athlete's metabolic needs. The nutritional framework is strong, but lacks the required implementation details.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a synchronized swimming athlete's precision diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 170<br><strong>weight:</strong> 65<br><strong>goal:</strong> Optimize performance and recovery for synchronized swimming competition<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provide balanced nutrition matching athlete's caloric needs<br>• Include protein sources compatible with dietary restrictions<br>• Ensure proper hydration and energy balance for high-intensity training<br>• Demonstrate meal timing suitable for synchronized swimming performance</td>
+                <td class="output"><pre>For a synchronized swimmer with these specifications, here's a recommended nutrition plan:
+
+Macronutrient Balance:
+- Carbohydrates: 55-60% of total calories (for energy)
+- Protein: 20-25% of total calories (muscle recovery)
+- Healthy fats: 15-20% of total calories
+
+Key Dietary Recommendations:
+1. Protein Sources (non-red meat):
+- Chicken
+- Fish (salmon, tuna)
+- Turkey
+- Eggs
+- Plant-based proteins (tofu, tempeh)
+- Legumes
+- Dairy-free protein powders
+
+2. Lactose-Free Alternatives:
+- Almond milk
+- Soy milk
+- Coconut yogurt
+- Lactose-free dairy products
+
+3. Performance-Boosting Foods:
+- Quinoa
+- Sweet potatoes
+- Berries
+- Chia seeds
+- Spinach
+- Bananas
+- Nuts and seeds
+
+4. Hydration:
+- Minimum 2-3 liters of water daily
+- Electrolyte-rich drinks
+
+5. Meal Timing:
+- Eat every 3-4 hours
+- Balanced meals with protein, complex carbs, and healthy fats
+- Pre and post-workout nutrition crucial
+
+Recommended Daily Calorie Intake: ~2200-2500 calories</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional guidelines and considers the athlete's specific needs, it fails to meet the mandatory requirements of providing a detailed daily meal plan with exact foods, portions, and precise meal timing. The output is more of a nutritional strategy than a concrete 1-day meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a triathlon training day's comprehensive nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 75<br><strong>goal:</strong> Optimize performance for Olympic distance triathlon training<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provide balanced macronutrient distribution for endurance training<br>• Include adequate hydration and electrolyte considerations<br>• Account for pre/post workout nutritional needs<br>• Meet caloric requirements for high-intensity training</td>
+                <td class="output"><pre>Based on the given information, here's a nutrition recommendation for an Olympic distance triathlon athlete:
+
+Nutritional Guidelines:
+1. Macronutrient Balance
+- Carbohydrates: 55-65% of total calories (for endurance training)
+- Protein: 15-20% of total calories
+- Healthy fats: 20-25% of total calories
+
+2. Estimated Daily Calorie Intake
+- Likely around 2,700-3,000 calories (based on height, weight, and intense training)
+
+Recommended Diet:
+
+Protein Sources (Lactose-free, No Red Meat):
+- Chicken
+- Turkey
+- Fish (salmon, tuna)
+- Eggs
+- Plant-based proteins (tofu, tempeh, legumes)
+- Protein supplements (whey isolate or plant-based)
+
+Carbohydrate Sources:
+- Whole grains
+- Sweet potatoes
+- Quinoa
+- Fruits
+- Vegetables
+- Rice
+- Oats
+
+Healthy Fats:
+- Avocado
+- Nuts
+- Seeds
+- Olive oil
+- Coconut oil
+
+Hydration & Supplements:
+- Electrolyte drinks
+- Omega-3 supplements
+- Vitamin D
+- Calcium-fortified alternatives
+
+Key Considerations:
+- Timing meals around training
+- Staying hydrated
+- Balanced, nutrient-dense meals</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides solid nutritional guidelines for a triathlon athlete, it fails to meet the mandatory requirements of providing a detailed daily meal plan with exact foods, portions, and timing. The output is more of a general nutritional strategy than a concrete 1-day meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional cheerleader's lean muscle diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 168<br><strong>weight:</strong> 58<br><strong>goal:</strong> maintain lean muscle and optimize performance<br><strong>restrictions:</strong> gluten-free, no red meat</td>
+                <td class="criteria">• Provides balanced macronutrient distribution<br>• Meets daily caloric needs for athletic performance<br>• Accommodates specified dietary restrictions<br>• Supports muscle maintenance and recovery</td>
+                <td class="output"><pre>Based on the provided information, here's a nutrition recommendation:
+
+Daily Macronutrient Breakdown:
+- Calories: Approximately 2,000-2,200 (based on age, activity level not specified)
+- Protein: 115-130g (0.8-1.2g per pound of body weight for muscle maintenance)
+- Carbohydrates: 225-275g (complex carbs for energy)
+- Fats: 55-70g (healthy sources)
+
+Recommended Foods:
+Proteins:
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna, mackerel)
+- Eggs
+- Greek yogurt
+- Tofu
+- Whey or plant-based protein powder
+
+Carbohydrates:
+- Quinoa
+- Brown rice
+- Sweet potatoes
+- Gluten-free oats
+- Fruits
+- Vegetables
+
+Healthy Fats:
+- Avocados
+- Nuts (almonds, walnuts)
+- Olive oil
+- Chia seeds
+- Coconut
+
+Meal Timing:
+- 4-5 smaller meals
+- Protein with each meal
+- Pre and post-workout nutrition
+
+Supplements to Consider:
+- Whey/plant protein
+- Creatine
+- Multivitamin
+
+Hydration: 2-3 liters of water daily</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework, it fails to meet the mandatory requirements of specifying exact meals, portions, and precise caloric needs. The macronutrient recommendations are general and not tailored to the specific athlete's profile. The lack of a structured daily meal plan with precise quantities means the solution does not fully satisfy the task description.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a fencing competitor's agile nutrition plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 72<br><strong>goal:</strong> maintain lean muscle and optimize performance for competitive fencing<br><strong>restrictions:</strong> gluten-free, no red meat</td>
+                <td class="criteria">• Provide balanced macronutrient distribution for athlete's energy needs<br>• Include meal plan that supports fencing-specific performance requirements<br>• Respect specified dietary restrictions<br>• Ensure total daily caloric intake matches athlete's metabolic demands</td>
+                <td class="output"><pre>Based on the provided information, here's a nutrition recommendation:
+
+Macronutrient Balance:
+- Protein: 25-30% of calories (high for muscle maintenance)
+- Carbohydrates: 45-50% of calories (for energy and performance)
+- Healthy fats: 20-25% of calories
+
+Recommended Daily Intake:
+- Total Calories: Around 2,400-2,600 calories
+- Protein: 140-180g (from sources like:
+  * Chicken
+  * Turkey
+  * Fish (salmon, tuna)
+  * Eggs
+  * Greek yogurt
+  * Tofu
+  * Protein powders)
+
+Key Nutritional Strategies:
+1. Gluten-free grains:
+   - Quinoa
+   - Rice
+   - Buckwheat
+   - Gluten-free oats
+
+2. Performance-boosting foods:
+   - Lean proteins
+   - Complex carbohydrates
+   - Omega-3 rich foods
+   - Antioxidant-rich fruits/vegetables
+
+3. Hydration and timing:
+   - Balanced meals
+   - Pre and post-workout nutrition
+   - Adequate water intake
+
+Supplementation to consider:
+- Whey or plant-based protein
+- Creatine
+- Vitamin D
+- Omega-3
+
+Consultation with a sports nutritionist recommended for personalized plan.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides a solid nutritional framework, it fails to meet the mandatory requirements of presenting a detailed 1-day meal plan with exact foods, portions, and meal timing. The output is more of a nutritional strategy guide than a concrete meal plan. The lack of specific meal details and precise caloric allocation by meal means this solution does not satisfy the core task requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a professional volleyball player's performance nutrition</td>
+                <td class="prompt-inputs"><strong>height:</strong> 196<br><strong>weight:</strong> 92<br><strong>goal:</strong> Maintain muscle mass and optimize performance for professional volleyball tournament<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provide 3500-4000 daily calories<br>• Include balanced macronutrient distribution for athlete performance<br>• Accommodate lactose intolerance and protein requirements<br>• Design meals supporting high-intensity athletic training</td>
+                <td class="output"><pre>Based on the provided information, here's a nutrition plan tailored to this professional volleyball player's needs:
+
+Macronutrient Breakdown:
+- High protein intake: 1.6-2.2g per kg of body weight (approximately 150-200g protein daily)
+- Moderate to high carbohydrates: 5-7g per kg of body weight for intense training
+- Healthy fats: 0.5-1g per kg of body weight
+
+Protein Sources (Lactose-free and No Red Meat):
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna, tilapia)
+- Eggs
+- Plant-based proteins: tofu, tempeh, seitan
+- Protein powders (pea, rice, or mixed plant protein)
+
+Carbohydrate Sources:
+- Whole grains: quinoa, brown rice, oats
+- Sweet potatoes
+- Fruits
+- Vegetables
+- Legumes
+
+Healthy Fat Sources:
+- Avocados
+- Nuts and seeds
+- Olive oil
+- Fatty fish
+- Coconut oil
+
+Hydration:
+- 3-4 liters of water daily
+- Electrolyte-rich drinks during and after training
+
+Supplements to Consider:
+- Vitamin D
+- Omega-3
+- Calcium (non-dairy sources)
+
+Meal Timing:
+- 5-6 smaller meals throughout the day
+- Pre and post-workout nutrition crucial for performance and recovery</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework, it fails to meet the mandatory requirements of specifying daily caloric total, exact meal portions, and precise meal timing. The strategic approach is sound, but lacks the critical implementation details needed for an athlete's nutrition plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with an Olympic rower's intense training diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 192<br><strong>weight:</strong> 92<br><strong>goal:</strong> Optimize performance and muscle recovery for Olympic rowing training<br><strong>restrictions:</strong> High protein requirement, gluten-free diet</td>
+                <td class="criteria">• Provide total daily caloric intake matching athlete's training needs<br>• Include balanced macronutrient distribution for high-intensity training<br>• Ensure meal plan supports muscle recovery and sustained energy<br>• Accommodate gluten-free dietary restriction</td>
+                <td class="output"><pre>For an Olympic rower with these specifications, here's a recommended nutritional approach:
+
+Daily Nutritional Strategy:
+1. Protein Intake
+- Aim for 1.6-2.2g of protein per kg of body weight
+- About 150-200g of protein daily
+- Sources:
+  * Lean meats (chicken, turkey)
+  * Fish (salmon, tuna)
+  * Eggs
+  * Gluten-free protein powders
+  * Greek yogurt
+  * Quinoa
+
+2. Carbohydrates
+- Complex, gluten-free carbs for energy
+- Approximately 5-7g per kg of body weight
+- Sources:
+  * Rice
+  * Sweet potatoes
+  * Quinoa
+  * Gluten-free oats
+  * Fruits
+  * Vegetables
+
+3. Fats
+- Healthy fats for recovery and hormone balance
+- About 0.5-1.5g per kg of body weight
+- Sources:
+  * Avocados
+  * Nuts
+  * Olive oil
+  * Fatty fish
+  * Chia seeds
+
+4. Hydration
+- 3-4 liters of water daily
+- Electrolyte supplementation during intense training
+
+Meal Timing:
+- Eat every 3-4 hours
+- Large breakfast
+- Pre and post-workout nutrition crucial
+
+Consider consulting a sports nutritionist for personalized advice.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides solid nutritional guidelines for an Olympic rower, it fails to meet the mandatory requirements of specifying total daily caloric intake and creating a detailed meal plan with exact foods, portions, and timing. The nutritional strategy is sound, but lacks the precision required for a high-performance athlete's meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a competitive badminton player's quick energy diet</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 75<br><strong>goal:</strong> Optimize performance and quick energy recovery for competitive badminton tournaments<br><strong>restrictions:</strong> Lactose intolerant, no red meat</td>
+                <td class="criteria">• Provide a balanced meal plan with adequate protein and complex carbohydrates<br>• Include meals that support quick energy replenishment for high-intensity sport<br>• Accommodate lactose intolerance and no red meat dietary restrictions<br>• Ensure total daily nutritional intake matches athlete's metabolic requirements</td>
+                <td class="output"><pre>Based on the provided information, here's a recommended nutritional approach for this competitive badminton athlete:
+
+Macronutrient Breakdown:
+- Carbohydrates: 55-60% of total calories (quick energy for performance)
+- Protein: 20-25% of total calories (muscle recovery and maintenance)
+- Healthy Fats: 15-20% of total calories (sustained energy)
+
+Specific Dietary Recommendations:
+
+Proteins (non-red meat):
+- Chicken breast
+- Turkey
+- Fish (salmon, tuna, mackerel)
+- Eggs
+- Plant-based proteins (tofu, tempeh, legumes)
+- Lactose-free protein powders
+
+Carbohydrates:
+- Whole grains (brown rice, quinoa, oats)
+- Sweet potatoes
+- Fruits (bananas, berries)
+- Whole wheat pasta
+- Sprouted bread
+
+Recovery Foods:
+- Coconut water
+- Banana with almond butter
+- Smoothies with plant-based protein
+- Rice cakes with lean protein
+
+Supplements:
+- Electrolyte supplements
+- Vegan/lactose-free protein powder
+- Omega-3 supplements
+
+Hydration is crucial - aim for 3-4 liters of water daily.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides excellent nutritional principles and food recommendations for a badminton athlete with lactose intolerance, it critically fails the mandatory requirements by not specifying daily caloric intake, exact meal portions, and a structured meal timeline. The nutritional strategy is sound, but lacks the precise implementation details required for an athlete's meal plan.</td>
+            </tr>
+        
+            <tr>
+                <td>Test with a field hockey player's endurance nutrition strategy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 75<br><strong>goal:</strong> Maintain high-intensity performance during field hockey tournaments<br><strong>restrictions:</strong> Lactose intolerant, prefers plant-based proteins</td>
+                <td class="criteria">• Provide balanced macronutrient distribution suitable for endurance athlete<br>• Include meals that support high-energy athletic performance<br>• Accommodate lactose intolerance with alternative protein/calcium sources<br>• Ensure adequate hydration and recovery nutrition strategy</td>
+                <td class="output"><pre>Based on the given information, here's a nutrition recommendation for this field hockey athlete:
+
+Macronutrient Breakdown:
+- Calories: Approximately 2,800-3,200 per day (depending on training intensity)
+- Protein: 1.6-2.0g per kg of body weight (120-150g daily)
+- Carbohydrates: 5-7g per kg of body weight (375-525g daily)
+- Healthy fats: 20-30% of total calories
+
+Recommended Foods:
+Proteins:
+- Tofu
+- Tempeh
+- Seitan
+- Legumes (beans, lentils)
+- Quinoa
+- Plant-based protein powders
+- Nuts and seeds
+
+Carbohydrates:
+- Brown rice
+- Sweet potatoes
+- Whole grain pasta
+- Oats
+- Fruits
+- Quinoa
+
+Healthy Fats:
+- Avocados
+- Chia seeds
+- Flaxseeds
+- Olive oil
+- Nuts (almonds, walnuts)
+
+Hydration:
+- 3-4 liters of water daily
+- Electrolyte drinks during tournaments
+
+Meal Timing:
+- Pre-game: Complex carbs, lean protein
+- Post-game: Protein and carb recovery meal
+- Frequent, balanced meals throughout the day
+
+Supplement Considerations:
+- Vitamin B12
+- Iron
+- Omega-3 (algae-based)</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">While the solution provides an excellent nutritional framework for a lactose-intolerant field hockey athlete, it fails to meet the mandatory requirement of including exact meals with portions and timing. The nutritional guidance is strong, but the lack of a precise meal plan prevents it from fully satisfying the task requirements.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
