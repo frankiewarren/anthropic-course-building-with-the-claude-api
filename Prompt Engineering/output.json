@@ -1,27 +1,6 @@
 [
   {
-    "output": "Based on the provided information, here's a recommended nutrition plan for an ultra-marathon athlete with gluten-free and no red meat dietary restrictions:\n\nMacronutrient Breakdown:\n- Carbohydrates: 55-65% of total calories (focus on complex carbs)\n- Protein: 15-20% of total calories\n- Healthy Fats: 20-25% of total calories\n\nRecommended Foods:\nProteins:\n- Chicken\n- Turkey\n- Fish (salmon, tuna, mackerel)\n- Eggs\n- Tofu\n- Legumes (beans, lentils)\n- Quinoa\n- Plant-based protein powders\n\nCarbohydrates:\n- Sweet potatoes\n- Brown rice\n- Quinoa\n- Gluten-free oats\n- Fruits\n- Vegetables\n\nHealthy Fats:\n- Avocado\n- Nuts (almonds, walnuts)\n- Seeds (chia, flax, pumpkin)\n- Olive oil\n- Coconut oil\n\nPerformance/Recovery Boosters:\n- Tart cherry juice\n- Beetroot juice\n- Turmeric\n- Ginger\n- Omega-3 rich foods\n\nHydration:\n- Electrolyte-rich drinks\n- Water\n- Coconut water\n\nRecommended daily calorie intake: ~3000-3500 calories",
-    "test_case": {
-      "prompt_inputs": {
-        "height": "180",
-        "weight": "75",
-        "goal": "Optimize ultra-marathon performance and recovery",
-        "restrictions": "Gluten-free, no red meat"
-      },
-      "solution_criteria": [
-        "Provide 3500-4000 total daily calories",
-        "Balance macronutrients for endurance performance",
-        "Include meals suitable for pre and post-training nutrition",
-        "Accommodate specified dietary restrictions"
-      ],
-      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Ultra-marathon runner requiring high-calorie, nutrient-dense meals with precise macronutrient ratios"
-    },
-    "score": 3,
-    "reasoning": "While the solution provides a solid nutritional framework, it fails to meet the mandatory requirements of specifying exact meals, portions, and timing. The calorie range is slightly under the specified target, and there are no detailed meal breakdowns. These omissions prevent the solution from fully addressing the task requirements."
-  },
-  {
-    "output": "Based on the provided information, here's a recommended nutrition plan:\n\nDaily Calorie & Macronutrient Breakdown:\n- Estimated Basal Metabolic Rate (BMR): ~1,800 calories\n- With endurance training: ~2,400-2,600 calories\n- Protein: 120-140g (1.6-2g per kg of body weight)\n- Carbohydrates: 300-350g\n- Fats: 70-80g\n\nProtein Sources (Vegan & Gluten-free):\n- Pea protein powder\n- Hemp protein\n- Quinoa\n- Beans (black, kidney, chickpeas)\n- Lentils\n- Seitan alternatives\n- Nuts and seeds (almonds, chia, hemp)\n\nCarbohydrate Sources:\n- Brown rice\n- Quinoa\n- Sweet potatoes\n- Oats (certified gluten-free)\n- Fruits\n- Gluten-free grains\n\nHealthy Fats:\n- Avocado\n- Olive oil\n- Nuts (almonds, walnuts)\n- Seeds (chia, flax)\n- Coconut oil\n\nSupplements to Consider:\n- Vegan B12\n- Vitamin D\n- Omega-3 (algae-based)\n- Zinc\n- Iron\n\nMeal Timing:\n- 4-5 smaller meals\n- Pre and post-workout nutrition\n\nHydration: 2.5-3 liters of water daily",
+    "output": "Here's a one-day meal plan for a vegan, gluten-free, and soy-free athlete focusing on muscle maintenance and endurance training:\n\nBreakfast (700 calories):\n- Quinoa and chia seed porridge\n- Mixed berries (blueberries, raspberries)\n- Almond butter\n- Hemp seed protein powder\n- Coconut milk\n- Topped with pumpkin seeds and sliced almonds\n\nMid-Morning Snack (300 calories):\n- Green smoothie with:\n  - Spinach\n  - Banana\n  - Pea protein powder\n  - Almond milk\n  - Chia seeds\n  - Spirulina\n\nLunch (650 calories):\n- Lentil and chickpea salad\n- Roasted sweet potato\n- Avocado\n- Mixed green vegetables\n- Olive oil and lemon dressing\n- Pumpkin seeds\n\nPre-Workout Snack (250 calories):\n- Rice cakes\n- Almond butter\n- Banana slices\n\nPost-Workout Recovery (350 calories):\n- Pea protein shake\n- Coconut water\n- Dates\n- Hemp seeds\n\nDinner (600 calories):\n- Grilled portobello mushroom\n- Quinoa\n- Roasted vegetables\n- Tahini sauce\n- Nutritional yeast\n- Mixed seeds\n\nEvening Snack (200 calories):\n- Coconut yogurt\n- Mixed nuts\n- Cinnamon\n\nNutritional Breakdown:\n- Total Calories: ~3,050\n- Protein: 150-170g\n- Carbohydrates: 350-400g\n- Healthy Fats: 100-120g\n\nHydration:\n- 3-4 liters of water throughout the day\n\nNote: Always consult a registered dietitian for personalized nutrition advice.",
     "test_case": {
       "prompt_inputs": {
         "height": "175",
@@ -38,11 +17,11 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "Vegan athlete with gluten and soy allergies needing protein-rich meal alternatives"
     },
-    "score": 3,
-    "reasoning": "While the solution provides excellent nutritional context and guidelines, it fails to meet the mandatory requirement of creating a specific 1-day meal plan with exact foods, portions, and timing. The output is more of a nutritional strategy than an actionable daily meal plan."
+    "score": 9,
+    "reasoning": "The solution successfully addresses all mandatory requirements by providing a complete daily meal plan with total calories (3,050), macronutrient breakdown, and meals with specific foods and timing. The plan is tailored to an athlete's nutritional needs while strictly adhering to vegan, gluten-free, and soy-free restrictions. Minor improvements could enhance precision of nutritional details."
   },
   {
-    "output": "Based on the given information, here's a nutritional recommendation:\n\nMacronutrient Breakdown:\n- Calories: Approximately 2,800-3,000 calories per day\n- Protein: 120-140g (1.5-1.7g per kg of body weight)\n- Carbohydrates: 350-400g\n- Healthy fats: 80-90g\n\nRecommended Food Choices:\nProtein Sources:\n- Chicken\n- Turkey\n- Fish (salmon, tuna, tilapia)\n- Egg whites\n- Plant-based proteins (tofu, tempeh, legumes)\n- Protein supplements (whey isolate or plant-based)\n\nCarbohydrate Sources:\n- Brown rice\n- Quinoa\n- Sweet potatoes\n- Whole grain pasta\n- Oats\n- Fruits\n- Vegetables\n\nHealthy Fat Sources:\n- Avocado\n- Olive oil\n- Nuts (almonds, walnuts)\n- Seeds (chia, flax)\n- Coconut oil\n\nLactose-Free Alternatives:\n- Almond milk\n- Soy milk\n- Lactose-free yogurt\n- Lactose-free protein powders\n\nHydration: 3-4 liters of water daily\n\nRecommendations should be personalized and adjusted with a nutritionist or dietitian.",
+    "output": "Here's a one-day meal plan for an athlete with the specified characteristics:\n\nBreakfast (7:00 AM):\n- Quinoa and spinach breakfast bowl\n- 3 egg whites + 1 whole egg scrambled\n- 1/2 avocado\n- Mixed berries\n- Black coffee\nMacros: ~500 calories, 35g protein, 40g carbs, 25g healthy fats\n\nMid-Morning Snack (10:00 AM):\n- Dairy-free protein smoothie\n- Almond milk\n- Plant-based protein powder\n- Banana\n- Handful of almonds\nMacros: ~350 calories, 25g protein, 30g carbs, 15g fats\n\nLunch (12:30 PM):\n- Grilled chicken breast\n- Brown rice\n- Roasted vegetables (broccoli, carrots, zucchini)\n- Olive oil and herbs\nMacros: ~550 calories, 45g protein, 55g carbs, 20g fats\n\nPre-Workout Snack (3:00 PM):\n- Rice cakes\n- Almond butter\n- Sliced apple\nMacros: ~300 calories, 10g protein, 35g carbs, 15g fats\n\nPost-Workout (5:30 PM):\n- Salmon\n- Sweet potato\n- Steamed asparagus\n- Lemon and herbs\nMacros: ~450 calories, 40g protein, 40g carbs, 20g fats\n\nEvening Snack (8:00 PM):\n- Dairy-free Greek-style yogurt alternative\n- Chia seeds\n- Mixed nuts\nMacros: ~250 calories, 15g protein, 20g carbs, 15g fats\n\nTotal Daily Intake:\n- Calories: ~2,400\n- Protein: 170g\n- Carbohydrates: 230g\n- Fats: 110g\n\nHydration: 3-4 liters of water throughout the day\n\nNotes:\n- Meals are lactose-free\n- No red meat\n- Balanced macronutrients\n- Supports athletic performance and weight maintenance\n\nRecommended adjustments based on specific training intensity and individual metabolism.",
     "test_case": {
       "prompt_inputs": {
         "height": "185",
@@ -59,11 +38,32 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "Professional swimmer training during pre-competition season with weight maintenance goals"
     },
-    "score": 3,
-    "reasoning": "While the solution provides solid nutritional guidelines and macronutrient recommendations, it fails to meet the mandatory requirements of specifying exact meals, portions, and meal timing. The output is more of a general nutritional framework than a concrete 1-day meal plan for an athlete."
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements with a structured meal plan that provides clear caloric and macronutrient information. It successfully accommodates the specified dietary restrictions and provides balanced nutrition. While generally sound, the plan could be optimized for a high-intensity swimming athlete with potentially higher caloric needs and more protein diversity."
   },
   {
-    "output": "Based on the information provided, here's a recommended nutrition plan:\n\nMacronutrient Breakdown:\n- Total Daily Calories: 2,800-3,000 calories\n- Protein: 180-220g (25-30% of total calories)\n- Carbohydrates: 300-350g (40-45% of total calories)\n- Healthy Fats: 80-100g (25-30% of total calories)\n\nProtein Sources (Dairy-Free):\n- Lean meats (chicken, turkey, lean beef)\n- Fish (salmon, tuna)\n- Eggs\n- Plant-based proteins (tofu, tempeh)\n- Protein powders (pea, rice, or hemp protein)\n\nCarbohydrate Sources:\n- Brown rice\n- Quinoa\n- Sweet potatoes\n- Oats\n- Whole grain bread\n- Fruits and vegetables\n\nHealthy Fat Sources:\n- Avocados\n- Nuts and seeds\n- Olive oil\n- Coconut oil\n- Fatty fish\n\nMeal Timing:\n- 5-6 smaller meals per day\n- Protein in every meal\n- Pre and post-workout nutrition crucial\n\nSupplements:\n- Dairy-free protein powder\n- Creatine\n- Multivitamin\n- Omega-3 supplements\n\nHydration: 3-4 liters of water daily\n\nConsult a nutritionist for personalized advice.",
+    "output": "Here's a detailed one-day meal plan for an ultra-marathon athlete with gluten-free and no red meat requirements:\n\nNutritional Profile:\n- Calories: ~3,500-4,000 (based on high-intensity training needs)\n- Macronutrient Breakdown:\n  - Carbohydrates: 55-60%\n  - Protein: 20-25%\n  - Healthy Fats: 20-25%\n\nMeal Plan:\n\nBreakfast (7:00 AM):\n- Quinoa porridge with almond milk\n- Mixed berries and sliced almonds\n- Chia seeds\n- 2 hard-boiled eggs\n- Green tea\nCalories: ~700\nMacros: High carb, moderate protein, healthy fats\n\nMid-Morning Snack (10:00 AM):\n- Gluten-free protein smoothie\n- Banana\n- Spinach\n- Plant-based protein powder\n- Almond butter\nCalories: ~350\nMacros: High protein, moderate carbs\n\nLunch (12:30 PM):\n- Grilled wild-caught salmon\n- Sweet potato\n- Roasted Brussels sprouts\n- Avocado\nCalories: ~750\nMacros: High protein, complex carbs, healthy fats\n\nPre-Training Snack (3:00 PM):\n- Rice cakes\n- Chicken breast\n- Hummus\nCalories: ~300\nMacros: Balanced protein and carbs\n\nPost-Training Recovery (6:00 PM):\n- Gluten-free pasta with chicken\n- Olive oil\n- Nutritional yeast\n- Steamed broccoli\nCalories: ~650\nMacros: High carb, moderate protein\n\nEvening Snack (8:30 PM):\n- Greek yogurt (lactose-free)\n- Gluten-free granola\n- Mixed nuts\n- Honey\nCalories: ~400\nMacros: Balanced protein, carbs, and fats\n\nHydration:\n- 4-5 liters of water throughout the day\n- Electrolyte supplements during long training sessions\n\nKey Considerations:\n- Gluten-free grains: Quinoa, rice, buckwheat\n- Lean proteins: Chicken, fish, plant-based proteins\n- Focus on complex carbohydrates\n- High nutrient density\n- Anti-inflammatory foods\n- Adequate hydration\n\nSupplementation Recommendations:\n- Omega-3 fish oil\n- Vitamin D\n- Magnesium\n- Electrolyte replacement\n\nNotes:\n- Adjust portion sizes based on specific training intensity\n- Consult with a sports nutritionist for personalized advice\n- Monitor energy levels and performance\n\nThis meal plan provides a balanced, nutrient-dense approach tailored to an ultra-marathon athlete's specific dietary needs and performance goals.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180",
+        "weight": "75",
+        "goal": "Optimize ultra-marathon performance and recovery",
+        "restrictions": "Gluten-free, no red meat"
+      },
+      "solution_criteria": [
+        "Provide 3500-4000 total daily calories",
+        "Balance macronutrients for endurance performance",
+        "Include meals suitable for pre and post-training nutrition",
+        "Accommodate specified dietary restrictions"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Ultra-marathon runner requiring high-calorie, nutrient-dense meals with precise macronutrient ratios"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements with a well-structured meal plan that addresses the athlete's specific dietary needs. It provides a comprehensive approach to nutrition for an ultra-marathon athlete, accommodating gluten-free and no red meat restrictions while offering balanced nutrition throughout the day. The meal timing, caloric range, and macronutrient distribution are particularly strong points."
+  },
+  {
+    "output": "Here's a one-day meal plan for an athlete transitioning weight classes while maintaining strength and avoiding dairy:\n\nBreakfast (7:00 AM):\n- 5 egg whites + 2 whole eggs scrambled\n- 1 cup of quinoa\n- 1 medium avocado\n- Black coffee\nMacros: 50g protein, 40g carbs, 30g healthy fats\nCalories: ~650\n\nMid-Morning Snack (10:00 AM):\n- Dairy-free protein shake (plant-based pea protein)\n- 1 banana\n- 1/4 cup almonds\nMacros: 35g protein, 30g carbs, 15g fats\nCalories: ~400\n\nLunch (12:30 PM):\n- 8 oz grilled chicken breast\n- 1 cup brown rice\n- 2 cups mixed vegetables (broccoli, spinach)\n- Olive oil dressing\nMacros: 60g protein, 50g carbs, 20g fats\nCalories: ~550\n\nPre-Workout Snack (3:00 PM):\n- Lean turkey breast (4 oz)\n- Sweet potato\n- Handful of mixed seeds\nMacros: 30g protein, 35g carbs, 10g fats\nCalories: ~350\n\nPost-Workout (5:00 PM):\n- Dairy-free protein shake\n- 1 cup coconut water\n- 1 scoop vegan protein\nMacros: 40g protein, 25g carbs, 5g fats\nCalories: ~300\n\nDinner (7:00 PM):\n- 10 oz wild-caught salmon\n- Quinoa\n- Roasted asparagus\n- Lemon and herbs\nMacros: 55g protein, 40g carbs, 25g fats\nCalories: ~600\n\nEvening Snack (9:30 PM):\n- Egg white omelet with spinach\n- Chia seeds\nMacros: 25g protein, 10g carbs, 10g fats\nCalories: ~250\n\nDaily Totals:\n- Protein: 295g\n- Carbohydrates: 230g\n- Fats: 115g\n- Total Calories: ~3,100\n\nKey Considerations:\n- High protein intake supports muscle maintenance\n- Balanced macronutrients for weight class transition\n- Dairy-free options throughout\n- Nutrient-dense whole foods\n- Supports strength maintenance\n\nRecommendation: Consult with a sports nutritionist to fine-tune based on individual metabolic needs and training intensity.",
     "test_case": {
       "prompt_inputs": {
         "height": "183",
@@ -80,32 +80,11 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "Powerlifter in weight class transition requiring strategic meal timing and composition"
     },
-    "score": 3,
-    "reasoning": "While the solution provides an excellent nutritional framework and macronutrient strategy, it fails to meet the mandatory requirement of presenting a specific 1-day meal plan with exact foods, portions, and meal timing. The output is more of a nutritional guideline than a concrete daily meal plan."
+    "score": 9,
+    "reasoning": "The solution fully meets all mandatory requirements with a robust meal plan targeting an athlete's weight class transition. It provides detailed meals with exact portions, timing, macronutrient breakdown, and total calories. The protein intake is substantially higher than the minimum requirement, and all meals are dairy-free. While not perfect, the plan successfully addresses the core nutritional needs for the specified athlete."
   },
   {
-    "output": "I'll help design an optimized nutrition plan for this Olympic-level gymnast with their specific needs:\n\nDaily Nutritional Approach:\n\nMacronutrient Breakdown:\n- Protein: 1.6-2.2g per kg of body weight (110-140g daily)\n- Carbohydrates: 5-7g per kg (310-430g daily)\n- Healthy fats: 20-30% of total calories\n\nRecommended Foods:\nProteins:\n- Lean chicken breast\n- Turkey\n- Fish (salmon, tuna)\n- Egg whites\n- Gluten-free protein powders\n- Quinoa\n- Tofu\n\nCarbohydrates:\n- Sweet potatoes\n- Rice\n- Gluten-free oats\n- Fruits (bananas, berries)\n- Quinoa\n- Beans\n\nHealthy Fats:\n- Avocados\n- Nuts (almonds, walnuts)\n- Chia seeds\n- Olive oil\n- Coconut oil\n\nSupplements:\n- Gluten-free protein powder\n- Calcium supplement\n- Vitamin D\n- Omega-3\n- Electrolyte replacements\n\nHydration: 3-4 liters of water daily\n\nMeal Timing: 5-6 smaller meals to maintain consistent energy\n\nWould you like me to draft a sample meal plan?",
-    "test_case": {
-      "prompt_inputs": {
-        "height": "168",
-        "weight": "62",
-        "goal": "Olympic gymnastics performance optimization and peak energy maintenance",
-        "restrictions": "Gluten-free, lactose-intolerant, high-protein requirements"
-      },
-      "solution_criteria": [
-        "Provide a balanced 1-day meal plan with 2500-3000 total calories",
-        "Include adequate protein for muscle recovery (1.6-2.2g per kg of body weight)",
-        "Ensure micronutrient diversity supporting gymnastic performance",
-        "Accommodate specified dietary restrictions"
-      ],
-      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Olympic gymnast needing precise micronutrient balance and performance optimization"
-    },
-    "score": 3,
-    "reasoning": "While the solution provides an excellent nutritional framework, it fails to meet the mandatory requirements of producing a specific 1-day meal plan with exact calories, portions, and meal timing. The output is more of a general nutritional strategy than a concrete daily meal plan."
-  },
-  {
-    "output": "Based on the provided information, here's a nutritional recommendation for this basketball player:\n\nCalorie & Macronutrient Profile:\n- Estimated Daily Calories: 3,200-3,500 calories\n- Protein: 180-200g (1.8-2.0g per kg of body weight)\n- Carbohydrates: 400-450g\n- Healthy Fats: 80-100g\n\nQuick, Budget-Friendly Meal Suggestions:\n\nBreakfast Options:\n- Protein smoothies with whey/mass gainer\n- Overnight oats with protein powder\n- Greek yogurt with granola and fruits\n- Eggs (scrambled/hard-boiled) with toast\n\nLunch/Dinner Options:\n- Rotisserie chicken with microwaveable rice\n- Canned tuna/salmon with pre-made salad\n- Protein wraps\n- Frozen pre-cooked chicken/fish with instant rice\n- Meal prep containers with lean protein + complex carbs\n\nSnacks:\n- Protein bars\n- Nuts\n- Protein shakes\n- Bananas\n- Peanut butter sandwiches\n\nSupplements:\n- Whey protein\n- Multivitamin\n- Creatine monohydrate\n\nHydration: 4-5 liters of water daily\n\nRecommendations prioritize convenience, nutrition, and performance support.",
+    "output": "Here's a one-day meal plan tailored for an athlete with the given specifications:\n\nNutritional Profile:\n- Total Calories: Approximately 3,200-3,500\n- Macronutrient Breakdown:\n  - Protein: 200-220g (25-30%)\n  - Carbohydrates: 400-450g (50-55%)\n  - Fats: 80-100g (20-25%)\n\nMeal Plan:\n\nBreakfast (7:00 AM):\n- Overnight oats prepared the night before\n  - 1 cup rolled oats\n  - 1 scoop whey protein\n  - 1 banana\n  - 2 tbsp almond butter\n  - Cinnamon\n- 1 Greek yogurt\n- 1 multivitamin supplement\n\nMid-Morning Snack (10:00 AM):\n- Protein smoothie\n  - 1 scoop whey protein\n  - 1 cup frozen mixed berries\n  - 1 cup spinach\n  - 1 cup almond milk\n  - Ice\n\nLunch (12:30 PM):\n- Rotisserie chicken wrap\n  - Pre-cooked rotisserie chicken\n  - Whole wheat tortilla\n  - Mixed greens\n  - Hummus\n- Microwaveable brown rice packet\n- Apple\n\nPre-Workout Snack (3:30 PM):\n- Protein bar\n- Banana\n- Electrolyte drink\n\nPost-Workout Meal (5:30 PM):\n- Canned tuna packet\n- Microwaveable quinoa\n- Pre-cut mixed vegetables\n- Olive oil\n- Salt and pepper\n\nDinner (7:30 PM):\n- Meal prep container with:\n  - Grilled chicken breast\n  - Sweet potato\n  - Steamed broccoli\n- 1 cup cottage cheese\n\nEvening Snack (9:30 PM):\n- Protein shake\n- Handful of almonds\n\nMeal Prep and Budget Tips:\n1. Use rotisserie chicken and pre-cooked proteins\n2. Buy in bulk (oats, protein powder, frozen fruits)\n3. Utilize microwaveable and pre-packaged options\n4. Prep overnight oats and meal prep containers in advance\n5. Use canned and packet proteins for convenience\n\nHydration:\n- Aim for 3-4 liters of water throughout the day\n- Electrolyte drink during and post-workout\n\nSupplement Recommendations:\n- Whey protein\n- Multivitamin\n- Omega-3 supplement\n- Electrolyte powder\n\nNotes:\n- Adjust portion sizes based on exact caloric needs\n- Consult with a nutritionist for personalized advice\n- Monitor energy levels and performance",
     "test_case": {
       "prompt_inputs": {
         "height": "198",
@@ -122,11 +101,32 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "College basketball player with limited budget and access to cooking facilities"
     },
-    "score": 3,
-    "reasoning": "The solution provides a solid framework for a basketball athlete's nutrition plan with convenient, budget-friendly options. However, it fails to meet the mandatory requirements of specifying exact food portions, precise meal timing, and a detailed caloric breakdown per meal. These omissions prevent the solution from fully satisfying the extra important criteria."
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements with a detailed meal plan that provides approximately 3,200-3,500 calories, balanced macronutrient distribution, and easily prepared meals. The plan addresses the athlete's need for quick, budget-friendly nutrition with minimal cooking. While mostly successful, there are minor opportunities for nutritional optimization."
   },
   {
-    "output": "Based on the provided information, here's a recommended dietary approach:\n\nNutritional Profile:\n- Estimated Daily Calorie Needs: ~2,400-2,600 calories\n- Weight Loss Target: 500-750 calorie deficit per day\n- Macronutrient Breakdown:\n  * Protein: 25-30% (150-195g)\n  * Carbohydrates: 40-45% (240-290g)\n  * Healthy Fats: 25-30% (67-87g)\n\nFood Recommendations:\nProteins:\n- Chicken breast\n- Turkey\n- Fish (salmon, tuna, mackerel)\n- Egg whites\n- Plant-based proteins (tofu, tempeh)\n- Whey or plant protein isolates\n\nCarbohydrates:\n- Quinoa\n- Brown rice\n- Sweet potatoes\n- Oats\n- Whole grain bread\n- Fruits\n- Vegetables\n\nHealthy Fats:\n- Avocado\n- Nuts (almonds, walnuts)\n- Olive oil\n- Chia seeds\n- Coconut oil\n\nLactose-Free Alternatives:\n- Almond milk\n- Coconut yogurt\n- Lactose-free protein powders\n\nAdditional Recommendations:\n- Hydration\n- Balanced pre and post-workout nutrition\n- Supplement with omega-3s\n- Consider consulting a sports nutritionist",
+    "output": "Here's a carefully designed one-day meal plan for an Olympic gymnast with the specified dietary requirements:\n\nBreakfast (Pre-Training):\n- Quinoa porridge with almond milk\n- 2 poached eggs\n- Mixed berries (blueberries, raspberries)\n- Chia seed sprinkle\n- Green tea\n\nNutritional Focus: High protein, complex carbohydrates, antioxidants\nCalories: ~500\nProtein: 30g\nCarbs: 45g\n\nMid-Morning Performance Snack:\n- Banana\n- Almond butter (2 tbsp)\n- Gluten-free protein smoothie with pea protein\n- Coconut water\n\nNutritional Focus: Quick energy, muscle recovery\nCalories: ~300\nProtein: 25g\nCarbs: 30g\n\nLunch (Post-Training):\n- Grilled wild salmon\n- Roasted sweet potato\n- Steamed broccoli\n- Quinoa\n- Olive oil drizzle\n\nNutritional Focus: Lean protein, anti-inflammatory\nCalories: ~600\nProtein: 40g\nCarbs: 50g\n\nAfternoon Recovery Snack:\n- Rice cakes\n- Avocado\n- Grilled chicken strips\n- Himalayan salt\n\nNutritional Focus: Muscle repair, sustained energy\nCalories: ~350\nProtein: 25g\nCarbs: 35g\n\nDinner:\n- Grass-fed lean beef\n- Cauliflower rice\n- Roasted vegetables (zucchini, bell peppers)\n- Herb marinade\n- Small side of lentils\n\nNutritional Focus: Protein replenishment, micronutrients\nCalories: ~550\nProtein: 45g\nCarbs: 40g\n\nEvening Recovery Drink:\n- Hemp protein shake\n- Almond milk\n- Spinach\n- Turmeric\n- Ginger\n\nNutritional Focus: Anti-inflammatory, muscle recovery\nCalories: ~200\nProtein: 20g\n\nTotal Daily Nutritional Breakdown:\n- Calories: ~2500\n- Protein: 185g\n- Carbohydrates: 200g\n- All meals gluten-free\n- Lactose-free\n- Nutrient-dense\n\nHydration Recommendation:\n- 3-4 liters of water\n- Electrolyte supplementation\n\nAdditional Notes:\n- Meal timing aligned with training schedule\n- Emphasis on lean proteins\n- Complex carbohydrates for sustained energy\n- Anti-inflammatory ingredients\n- Supports high-performance athletic requirements\n\nPersonalized Recommendations:\n- Consult sports nutritionist for precise macronutrient adjustment\n- Regular blood work to fine-tune nutrition\n- Potential supplements: Vitamin D, Omega-3, Magnesium\n\nThis meal plan is designed to support high-intensity training, muscle recovery, and peak performance while respecting dietary restrictions.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "168",
+        "weight": "62",
+        "goal": "Olympic gymnastics performance optimization and peak energy maintenance",
+        "restrictions": "Gluten-free, lactose-intolerant, high-protein requirements"
+      },
+      "solution_criteria": [
+        "Provide a balanced 1-day meal plan with 2500-3000 total calories",
+        "Include adequate protein for muscle recovery (1.6-2.2g per kg of body weight)",
+        "Ensure micronutrient diversity supporting gymnastic performance",
+        "Accommodate specified dietary restrictions"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Olympic gymnast needing precise micronutrient balance and performance optimization"
+    },
+    "score": 9,
+    "reasoning": "The solution meets most mandatory requirements with a comprehensive meal plan. Protein calculation needs refinement: athlete's weight is 62kg, requiring 99-136g protein daily. This plan provides 185g, which exceeds requirements. Meal timing, caloric intake, and dietary restrictions are well-addressed. Minor improvements could enhance micronutrient diversity and protein source variation."
+  },
+  {
+    "output": "Here's a comprehensive one-day meal plan for this athlete:\n\nNutritional Profile:\n- Total Calories: ~2400-2600 calories\n- Macronutrient Breakdown:\n  - Protein: 30% (180-195g)\n  - Carbohydrates: 45% (270-293g)\n  - Healthy Fats: 25% (67-72g)\n\nMEAL PLAN:\n\nBreakfast (600 calories):\n- Tofu scramble with spinach and bell peppers\n- Quinoa toast with almond butter\n- Fresh berries\n- Coconut water\n\nMid-Morning Snack (250 calories):\n- Protein smoothie (plant-based protein)\n- Banana\n- Chia seeds\n\nLunch (650 calories):\n- Grilled chicken breast\n- Sweet potato\n- Roasted mixed vegetables\n- Olive oil dressing\n- Hydration: Electrolyte water\n\nAfternoon Snack (300 calories):\n- Rice cakes\n- Hummus\n- Pumpkin seeds\n- Apple\n\nDinner (700 calories):\n- Baked salmon\n- Brown rice\n- Steamed broccoli\n- Avocado\n- Lemon-herb seasoning\n\nEvening Recovery Drink (200 calories):\n- Plant-based protein shake\n- Almond milk\n\nWould you like me to provide specific recipes or detailed nutritional breakdown?",
     "test_case": {
       "prompt_inputs": {
         "height": "180",
@@ -143,11 +143,11 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "Triathlete managing simultaneous weight loss and muscle preservation goals"
     },
-    "score": 3,
-    "reasoning": "While the solution provides excellent nutritional guidelines and food recommendations, it critically fails the mandatory requirements by not presenting a specific 1-day meal plan with exact foods, portions, and timing. The nutritional insights are strong, but the core requirement of a concrete daily meal plan is not met."
+    "score": 7,
+    "reasoning": "The solution meets all mandatory requirements by providing a daily caloric total (~2400-2600 calories), clear macronutrient breakdown, and a structured meal plan with specific foods. The plan addresses the athlete's dietary restrictions and appears designed to support weight loss and muscle maintenance. However, it lacks granular details about portion sizes and specific triathlon training nutritional strategies."
   },
   {
-    "output": "Based on the given information, here are some dietary recommendations:\n\nNutritional Profile:\n- Estimated daily calorie needs: ~2,500-2,700 calories\n- Protein target: 120-150g per day\n- Focus on gluten-free, high-protein, easy-to-prepare meals\n\nRecommended Foods/Meals:\n\nQuick Protein Sources:\n- Greek yogurt\n- Protein shakes\n- Hard-boiled eggs\n- Rotisserie chicken\n- Canned tuna/salmon\n- Protein bars (gluten-free)\n\nPortable Meal Options:\n- Protein smoothies with whey/plant protein\n- Pre-made protein boxes with chicken, nuts, cheese\n- Gluten-free protein muffins\n- Protein energy balls\n- Jerky (turkey/beef)\n\nComplex Carbs:\n- Rice cakes\n- Sweet potatoes\n- Quinoa\n- Gluten-free oats\n\nSnacks:\n- Mixed nuts\n- Protein bars\n- Fruit with nut butter\n- Hard-boiled eggs\n- Protein shakes\n\nMeal Prep Tips:\n- Batch cook proteins on weekends\n- Use pre-cooked rotisserie chicken\n- Invest in good protein powder\n- Keep quick, nutritious snacks readily available\n\nWould you like more specific meal plan details?",
+    "output": "Athlete Meal Plan: High-Protein, Gluten-Free, Low-Prep\n\nEstimated Daily Calorie Needs: ~2,600-2,800 calories\nMacronutrient Breakdown: \n- Protein: 150-175g\n- Carbs: 300-350g\n- Healthy Fats: 70-90g\n\nBreakfast (7:00 AM):\n- Protein smoothie\n  * 2 scoops whey isolate protein powder\n  * 1 banana\n  * 1 cup almond milk\n  * 2 tbsp almond butter\n  * Handful of spinach\n- Calories: 500\n- Protein: 40g\n\nMid-Morning Snack (10:00 AM):\n- Greek yogurt with mixed berries\n- Handful of mixed nuts\n- Calories: 300\n- Protein: 25g\n\nLunch (12:30 PM):\n- Meal prep container with:\n  * Grilled chicken breast\n  * Quinoa\n  * Roasted vegetables\n  * Olive oil dressing\n- Calories: 550\n- Protein: 45g\n\nPre-Workout Snack (3:00 PM):\n- Protein bar (gluten-free)\n- Apple\n- Calories: 300\n- Protein: 20g\n\nPost-Workout (5:00 PM):\n- Protein shake\n  * Whey isolate\n  * Banana\n  * Coconut water\n- Calories: 250\n- Protein: 25g\n\nDinner (7:00 PM):\n- Salmon fillet\n- Sweet potato\n- Steamed broccoli\n- Calories: 500\n- Protein: 35g\n\nEvening Snack (9:00 PM):\n- Cottage cheese\n- Chia seeds\n- Berries\n- Calories: 250\n- Protein: 20g\n\nTotal Daily Intake:\n- Calories: 2,650\n- Protein: 210g\n- Gluten-free\n- Quick to prepare\n\nHydration: 3-4 liters of water throughout the day\n\nRecommendations:\n- Meal prep proteins and grains in bulk\n- Use pre-cut vegetables\n- Keep portable protein sources handy\n- Adjust portions based on training intensity",
     "test_case": {
       "prompt_inputs": {
         "height": "180",
@@ -164,11 +164,11 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "Professional rock climber with minimal cooking skills requiring simple, portable meal prep"
     },
-    "score": 3,
-    "reasoning": "While the solution offers good general nutritional guidance for an athlete, it fails to meet the mandatory requirements of providing a specific daily meal plan with exact foods, portions, timing, and a precise caloric/macronutrient breakdown. The recommendations are helpful but do not constitute a complete meal plan as specified in the extra important criteria."
+    "score": 9,
+    "reasoning": "The solution fully meets all mandatory requirements by providing a complete daily meal plan with exact caloric intake (2,650 calories), precise macronutrient breakdown, specific foods, portions, and timing. The plan adheres to gluten-free restrictions, offers portable meal choices, and supports athletic performance needs. While not perfect, it comprehensively addresses the original task description."
   },
   {
-    "output": "Based on the given information, here's a nutritional recommendation for this cyclist:\n\nCaloric and Macronutrient Needs:\n- Estimated Daily Calorie Needs: ~2,800-3,200 calories\n- Protein: 1.6-2.2g per kg of body weight (120-165g daily)\n- Carbohydrates: 5-7g per kg of body weight (375-525g daily)\n- Healthy fats: 0.5-1g per kg of body weight (38-75g daily)\n\nRecommended Foods:\nProtein Sources (Vegetarian/Lactose-Free):\n- Tofu\n- Tempeh\n- Seitan\n- Legumes (beans, lentils)\n- Quinoa\n- Plant-based protein powders\n- Eggs (if ovo-vegetarian)\n\nCarbohydrate Sources:\n- Whole grains\n- Sweet potatoes\n- Fruits\n- Oats\n- Brown rice\n- Quinoa\n\nRecovery and Performance Foods:\n- Chia seeds\n- Hemp seeds\n- Nuts and nut butters\n- Dates\n- Smoothies with plant protein\n- Beetroot juice\n\nSupplements to Consider:\n- Vegan protein powder\n- B12\n- Iron\n- Omega-3 (algae-based)\n\nHydration: 3-4 liters of water daily, electrolyte drinks during intense training.",
+    "output": "One-Day High-Performance Vegetarian Meal Plan for Cyclist\n\nNutritional Profile:\n- Total Daily Calories: ~3,000-3,500 kcal\n- Macronutrient Breakdown:\n  - Protein: 25-30% (188-263g)\n  - Carbohydrates: 50-55% (375-438g)\n  - Healthy Fats: 20-25% (67-97g)\n\nBreakfast (Pre-Training, 6:30 AM):\n- Tofu scramble with spinach and nutritional yeast\n- Quinoa porridge with chia seeds\n- Mixed berries\n- Almond milk protein smoothie\n- Espresso\nNutrition: 650 kcal, 40g protein, 75g carbs, 22g fat\n\nMid-Morning Training Fuel:\n- Banana\n- Homemade energy gel (dates, maple syrup)\nNutrition: 200 kcal, 2g protein, 50g carbs\n\nPost-Training Recovery (10:30 AM):\n- Plant-based protein shake (pea/hemp protein)\n- Sweet potato\n- Roasted almonds\nNutrition: 500 kcal, 45g protein, 60g carbs, 20g fat\n\nLunch (12:30 PM):\n- Tempeh and black bean burrito bowl\n- Quinoa base\n- Roasted vegetables\n- Avocado\n- Salsa\nNutrition: 700 kcal, 50g protein, 85g carbs, 30g fat\n\nAfternoon Snack (3:30 PM):\n- Edamame\n- Hummus\n- Whole grain crackers\n- Pumpkin seeds\nNutrition: 350 kcal, 25g protein, 35g carbs, 18g fat\n\nDinner (7:00 PM):\n- Lentil and vegetable curry\n- Brown rice\n- Tofu cubes\n- Roasted Brussels sprouts\n- Tahini sauce\nNutrition: 650 kcal, 40g protein, 90g carbs, 22g fat\n\nEvening Recovery Snack (9:30 PM):\n- Vegan protein pudding\n- Berries\n- Walnuts\nNutrition: 250 kcal, 20g protein, 25g carbs, 15g fat\n\nHydration:\n- Water: 3-4 liters\n- Electrolyte drink during training\n\nKey Considerations:\n- Lactose-free\n- High protein from plant sources\n- Complex carbohydrates\n- Balanced micronutrients\n- Supports intense cycling performance\n\nSupplements Recommendation:\n- Vitamin B12\n- Omega-3 (algae-based)\n- Vegan protein powder\n- Iron supplement\n\nThis meal plan provides balanced nutrition, supports recovery, and meets vegetarian/lactose-free requirements while optimizing cycling performance.",
     "test_case": {
       "prompt_inputs": {
         "height": "180",
@@ -185,11 +185,11 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "Cross-country cyclist requiring high-energy, easily digestible meal plan during intense training"
     },
-    "score": 3,
-    "reasoning": "While the solution provides excellent nutritional guidelines and food recommendations, it critically fails the mandatory requirements by not presenting a concrete daily meal plan with exact foods, portions, and timing. The nutritional insights are strong, but the lack of a structured meal schedule prevents meeting the core task requirements."
+    "score": 7,
+    "reasoning": "The solution meets most mandatory requirements with a well-structured meal plan tailored to a cyclist's needs. It successfully accommodates dietary restrictions and provides a balanced approach to nutrition. However, it falls slightly short in total caloric intake and protein quantity for a high-intensity endurance athlete."
   },
   {
-    "output": "To help this person reach their goal of making the lightweight division while maintaining optimal performance nutrition, here's a tailored nutrition plan:\n\nNutritional Approach:\n- Calorie target: 2000-2200 calories per day\n- Macronutrient breakdown:\n  - Protein: 150-180g (30-35% of calories)\n  - Carbs: 180-200g (35-40% of calories)\n  - Fats: 55-65g (25-30% of calories)\n\nFood Recommendations:\nProteins (Gluten-free, dairy-free):\n- Lean meats: Chicken, turkey, fish\n- Eggs\n- Plant proteins: Tofu, tempeh\n- Protein powders: Pea, rice, or hemp protein\n\nCarbohydrates:\n- Quinoa\n- Sweet potatoes\n- Rice\n- Gluten-free oats\n- Fruits and vegetables\n\nHealthy Fats:\n- Avocado\n- Nuts and seeds\n- Olive oil\n- Coconut oil\n\nHydration:\n- 3-4 liters of water daily\n\nSupplements:\n- Gluten-free, dairy-free protein powder\n- Multivitamin\n- Electrolytes\n\nMeal timing and gradual weight cut recommended with professional guidance.",
+    "output": "Here's a tailored one-day meal plan for an athlete targeting lightweight division with gluten-free and dairy-free requirements:\n\nMacronutrient Target Estimates:\n- Total Calories: ~2400 calories\n- Protein: 180-200g\n- Carbs: 240-260g\n- Fats: 65-80g\n\nMeal Plan:\n\n\ud83c\udf73 Breakfast (600 calories):\n- 4 egg whites + 2 whole eggs scrambled\n- Quinoa porridge with almond milk\n- 1/2 cup mixed berries\n- 1 scoop pea protein isolate\n- Chia seeds\n\n\ud83e\udd57 Mid-Morning Snack (300 calories):\n- Grilled chicken breast (4 oz)\n- Handful of almonds\n- Sliced cucumber\n\n\ud83c\udf5a Lunch (650 calories):\n- Wild salmon (6 oz)\n- Sweet potato\n- Steamed broccoli\n- Olive oil drizzle\n- Herbs/spices\n\n\ud83e\udd64 Pre-Workout (250 calories):\n- Brown rice protein shake\n- Banana\n- Almond butter\n\n\ud83c\udf56 Post-Workout (400 calories):\n- Lean turkey breast\n- Cauliflower rice\n- Roasted vegetables\n- Coconut aminos\n\n\ud83c\udf19 Evening Snack (200 calories):\n- Egg white protein\n- Mixed seeds\n- Small apple\n\nHydration: 3-4 liters water throughout day\n\nSupplements to Consider:\n- Electrolyte powder\n- Omega-3\n- Multivitamin\n\nWould you like me to elaborate on any part of this meal plan?",
     "test_case": {
       "prompt_inputs": {
         "height": "178",
@@ -206,7 +206,7 @@
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
       "scenario": "Mixed martial arts fighter preparing for weight class weigh-in with precise nutritional requirements"
     },
-    "score": 3,
-    "reasoning": "While the solution provides a solid nutritional framework, it fails to meet the mandatory requirements of specifying exact meals, portions, and timing. The macronutrient targets are close but not precisely calculated for the athlete's target weight. The solution lacks the granular detail needed for a professional athlete's nutrition plan."
+    "score": 8,
+    "reasoning": "The solution comprehensively addresses the athlete's nutritional needs with a structured meal plan that meets most mandatory criteria. It provides appropriate macronutrient targets, respects dietary restrictions, and offers a balanced approach to nutrition. Minor refinements in calorie precision and nutrient timing would elevate the plan."
   }
 ]
