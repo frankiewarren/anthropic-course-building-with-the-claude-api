@@ -33,6 +33,10 @@ venv.bak/
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
+# Tool artifacts
+.backups/
+*/.backups/*
+
 # Environment variables
 .env
 .env.local
